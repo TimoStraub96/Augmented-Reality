@@ -107,15 +107,15 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortionGlowIntensity: 0.29
-    - _DistortionGlowThickness: 0.438
+    - _DistortionGlowIntensity: 0.2
+    - _DistortionGlowThickness: 0.29
     - _DistortionIntensity: 14.3
     - _DistortionSpeed: 2.3
-    - _DistortionThickness: 0.968
+    - _DistortionThickness: 1
     - _DistortionTransparancy: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Freqenzy: 21.2
+    - _Freqenzy: 6.88
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -128,7 +128,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 2.39
+    - _Speed: 0.87
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
