@@ -27,7 +27,10 @@ public class Animal_On_Tap : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Input.GetTouch(0).position);
         if (Physics.Raycast(ray, out _))
         {
-            animator.SetTrigger("OnTap");
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                animator.SetTrigger("OnTap");
+            }
             infoText.gameObject.SetActive(true);
         }
     }
