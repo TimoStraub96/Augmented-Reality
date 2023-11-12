@@ -75,11 +75,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-<<<<<<< Updated upstream
       "version": "2.0.22",
-=======
-      "version": "2.0.18",
->>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",
       "dependencies": {
