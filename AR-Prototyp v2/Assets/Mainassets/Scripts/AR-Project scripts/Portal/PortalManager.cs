@@ -20,6 +20,8 @@ public class PortalManager : MonoBehaviour
 
             foreach(Material m in r.materials){
                     childmaterial.Add(m);
+                    m.SetInt("_StencilComp",(int)CompareFunction.Equal);
+
             }
 
           

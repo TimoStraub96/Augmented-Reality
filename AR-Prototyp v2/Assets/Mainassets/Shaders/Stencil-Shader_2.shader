@@ -1,10 +1,11 @@
-Shader "Universal Render Pipeline/Lit/AR-Custom"
+Shader "Universal Render Pipeline/Lit/AR-Stencil"
 {
     Properties
     {
         // Specular vs Metallic workflow
+        [Enum(CompareFunction)] _StencilComp("Stencil Comp",Int) =8
         _WorkflowMode("WorkflowMode", Float) = 1.0
-        [Enum(CompareFunction)] _StencilComp("Stencil Comp",Int) =3
+        
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
         
@@ -75,7 +76,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
         // Universal Pipeline tag is required. If Universal render pipeline is not set in the graphics settings
         // this Subshader will fail. One can add a subshader below or fallback to Standard built-in to make this
         // material work with both Universal Render Pipeline and Builtin Unity Pipeline
-        Tags{"RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "UniversalMaterialType" = "Lit" "IgnoreProjector" = "True" "ShaderModel"="4.5"}
+        Tags{"RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "UniversalMaterialType" = "Lit" "IgnoreProjector" = "True" "ShaderModel"="4.5" "Queue"="Transparent" }
         LOD 300
 
         // ------------------------------------------------------------------
@@ -90,6 +91,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Blend[_SrcBlend][_DstBlend]
             ZWrite[_ZWrite]
             Cull[_Cull]
+             
             Stencil{
                 Ref 1
                 Comp [_StencilComp]
@@ -163,11 +165,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             ZTest LEqual
             ColorMask 0
             Cull[_Cull]
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -206,11 +204,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             ZWrite[_ZWrite]
             ZTest LEqual
             Cull[_Cull]
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -339,11 +333,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Tags{"LightMode" = "Meta"}
 
             Cull Off
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -375,11 +365,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Blend[_SrcBlend][_DstBlend]
             ZWrite[_ZWrite]
             Cull[_Cull]
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -415,11 +401,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Blend[_SrcBlend][_DstBlend]
             ZWrite[_ZWrite]
             Cull[_Cull]
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma only_renderers gles gles3 glcore d3d11
             #pragma target 2.0
@@ -584,11 +566,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Tags{"LightMode" = "Meta"}
 
             Cull Off
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma only_renderers gles gles3 glcore d3d11
             #pragma target 2.0
@@ -619,11 +597,7 @@ Shader "Universal Render Pipeline/Lit/AR-Custom"
             Blend[_SrcBlend][_DstBlend]
             ZWrite[_ZWrite]
             Cull[_Cull]
-            Stencil{
-                Ref 1
-                Comp [_StencilComp]
-                
-            }
+            
             HLSLPROGRAM
             #pragma only_renderers gles gles3 glcore d3d11
             #pragma target 2.0
