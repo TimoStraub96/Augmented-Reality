@@ -33,7 +33,7 @@ public class PortalManager : MonoBehaviour
     void OnTriggerStay(Collider collider)
     {
         Vector3 campositioninPortalspace = transform.InverseTransformPoint(maincam.transform.position);
-        Debug.Log(campositioninPortalspace.y);
+        //Debug.Log(campositioninPortalspace.y);
         if(campositioninPortalspace.y <2f){
            
         

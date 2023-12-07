@@ -106,7 +106,7 @@ Material:
     - _Ampl: 0.22
     - _Blend: 2
     - _BlendModePreserveSpecular: 0
-    - _Blur_intensity: 0.0046
+    - _Blur_intensity: 0.009
     - _BumpScale: 1
     - _CastShadows: 0
     - _ClearCoatMask: 0

@@ -5,6 +5,9 @@ using UnityEngine.Animations;
 
 public class Animal_Behavior : MonoBehaviour
 {
+    public Animator animator;
+    [SerializeField]private float moveSpeed;
+    [SerializeField]public bool snapped = false;
     public float rotationSpeed = 360.0f; // Animal's rotation speed (degrees per second)
     public float minRotationTime = 1.0f; // Minimum rotation time in seconds
     public float maxRotationTime = 5.0f; // Maximum rotation time in seconds
@@ -13,13 +16,20 @@ public class Animal_Behavior : MonoBehaviour
     public float maxMoveTime = 5.0f; // Maximum movement time in seconds
     private float currentActionTime;
     public float waitbetweenmove = 1.0f; // Minimum wait time in seconds
-    public GameObject field;
-    private bool isRotating = false;
     private Vector3 moveDirection;
     private Vector3 newDirection;
-    private bool isLeaving = false;
+    public GameObject field;
     private float isLeavingPause = 2f;
-    [SerializeField]private float moveSpeed;
+
+    //states
+    private bool isRotating = false;
+    
+    private bool isLeaving = false;
+    private bool colliding = false;
+    
+    
+    private bool isMoving = false;
+    
     void Start()
     {
         // Start the Animal's action (rotation or movement)
@@ -71,26 +81,61 @@ public class Animal_Behavior : MonoBehaviour
                 RotateToDirection(moveDirection);
 
                 yield return new WaitForSeconds(1f);
+
+                // Move the Animal for the chosen time
                 while (timer < currentActionTime)
                 {
+                    // Check if the Animal is leaving the field if so, rotate it to the field
                     if (isLeaving)
                     {
                         
                         yield return new WaitForSeconds(isLeavingPause);
                         moveDirection = newDirection;
+                        isMoving = false;
+                        if(animator != null)
+                        animator.SetBool("Moving", isMoving);
                         yield return new WaitForSeconds(2f);
+                        
                         isLeaving = false;
+                    }
+                    // Check if the Animal is colliding with another Animal if so
+                    if (colliding)
+                    {
+                        
+                        if(Random.value < 0.5f){
+                          moveDirection = Vector3.zero;
+                          if(animator != null){
+                            
+                          }
+                          isMoving = false;  
+                        }else{
+                           moveDirection = -moveDirection; 
+                        }
+                        
+                        
+                        
+                        
+                        yield return new WaitForSeconds(2f);
+                        colliding = false;
                     }
                     
                     // Move the Animal in the current direction
                     transform.position += moveDirection * moveSpeed * Time.deltaTime;
                     timer += Time.deltaTime;
+
+                    isMoving = true;
+                    if(animator != null)
+                        animator.SetBool("Moving", isMoving);
                     yield return null;
                 }
 
                 // Stop the movement
+
                 moveDirection = Vector3.zero;
                 float randomWaitTime = Random.Range(1.0f, 5.0f);
+                isMoving = false;
+                if(animator != null)
+                    animator.SetBool("Moving", isMoving);
                 yield return new WaitForSeconds(randomWaitTime);
             }
         }
@@ -136,6 +181,18 @@ public class Animal_Behavior : MonoBehaviour
 
     return randomDirectionInsideField;
     }
+
+    //obsolete no Animal-Tag is used
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+            
+            colliding = true;
+            
+           
+        
+    }
+
     
     void Update()
     {
