@@ -1,0 +1,97 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Mainassets/UI/styles.uss?fileID=7433441132597879392&amp;guid=0ee3448f0f943824da53c1341f8eb089&amp;type=3#styles" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center; color: rgb(33, 28, 4); position: relative; height: 100%;">
+        <ui:VisualElement name="Welcome" class="main-background" style="align-items: center; display: none;">
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Station 1" display-tooltip-when-elided="true" name="StationName" style="-unity-font-style: normal;" />
+                <ui:Label tabindex="-1" text="Zeitreise in AR" display-tooltip-when-elided="true" name="StationName" style="-unity-text-align: upper-center; -unity-font-style: bold;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Herzlich Willkommen! \n Wir freuen uns über ihren Besuch. \n\n Erfahre mit dem Klick auf weiter wie du die Zeitreise in die Eiszeit startest und Medaillen gewinnen kannst :)" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons">
+                <ui:Button text="Zurück zur Karte" display-tooltip-when-elided="true" name="Quit" class="cancel-button" />
+                <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Tutorial-1" class="main-background" style="flex-grow: 0; display: none; align-items: center;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Besuche bereits ausgestorbene Tiere aus der Eiszeit. \n\n Gewinne Medaillen mit jedem Tier, dass du entdeckst. \n\n Erfahre was beispielsweise ein Mammut gegessen und getan hat." display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
+            </ui:VisualElement>
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" enable-rich-text="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialComplete" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Gut gemacht!" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Klick dich durch :)&#10;&#10;Probier mal jeden Button aus dem Menü unten.&#10;&#10;Danach steht deiner Zeitreise nichts mehr im Wege, versprochen!" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Help" class="menu-item" style="left: 30px; top: 60px;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="right: 30px; top: 60px;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="translate: 0 0;" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button text="Nö, lieber zum Portal" display-tooltip-when-elided="true" name="Next" class="confirm-button" style="white-space: normal;" />
+            </ui:VisualElement>
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Start" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="Portal platzieren " display-tooltip-when-elided="true" style="-unity-text-align: upper-center; -unity-font-style: bold;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Platziere gleich das Portal mit deinem Finger auf dem Boden und gehe hindurch!" display-tooltip-when-elided="true" name="MainText" class="main-text" style="background-color: rgba(251, 251, 251, 0);" />
+            <ui:VisualElement name="PortalTapIcon" style="min-height: 60px;" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons">
+                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button text="Spiel Starten" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Main" class="main" style="display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="position: absolute; top: 10px; display: none;" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: none; top: auto; bottom: 110px; position: absolute;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Help" class="menu-item" style="top: 60px; left: 30px; -unity-font-style: bold;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 60px; right: 30px; background-image: none; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(251, 251, 251);" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="position: absolute; bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Bird_Button_Colored.png?fileID=2800000&amp;guid=130830d4609bf4b489dc9eb89ad5d2eb&amp;type=3#Bird_Button_Colored&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="HelpMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
+                <ui:Label tabindex="-1" text="Hilfe" display-tooltip-when-elided="true" />
+                <ui:Label tabindex="-1" text="Was ist los?&#10;Finde deine Antwort in den meist gestellten Fragen oder stelle eine eigene Frage" display-tooltip-when-elided="true" style="white-space: normal; width: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex;">
+                <ui:Label tabindex="-1" text="Wie platziere ich ein Portal richtig?" display-tooltip-when-elided="true" name="ToStart" class="tile-green" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Wann war die Eiszeit und wie lange ist es her?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Wie komme ich zurück zur Karte?" display-tooltip-when-elided="true" class="tile-green" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Wie verdiene ich mir eine Medaille?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
+            </ui:VisualElement>
+            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Confirmation" class="main-background" style="flex-grow: 0; align-items: center; height: auto; display: none;">
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="WARTE!" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Station wirklich verlassen?" display-tooltip-when-elided="true" class="main-text" style="background-color: rgba(251, 251, 251, 0); margin-bottom: 60px;" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="&lt;- Nein" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" />
+                <ui:Button text="Ja" display-tooltip-when-elided="true" name="Quit" class="confirm-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

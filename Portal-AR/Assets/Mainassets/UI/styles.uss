@@ -1,0 +1,205 @@
+.main-background {
+    flex-grow: 0;
+    background-color: rgb(221, 223, 202);
+    width: 85%;
+    height: auto;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.main-text {
+    background-color: rgb(251, 251, 251);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.header-text {
+    flex-grow: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 35px;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
+
+.bird-button {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image: url('project://database/Assets/Mainassets/UI/Bird_Button_Colored.png?fileID=2800000&guid=130830d4609bf4b489dc9eb89ad5d2eb&type=3#Bird_Button_Colored');
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-top: 20px;
+    transition-property: translate;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    margin-bottom: 40px;
+}
+
+.bird-button-open {
+    translate: 0 50px;
+}
+
+.action-buttons {
+    flex-grow: 0;
+    background-color: rgba(0, 0, 0, 0);
+    bottom: -20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    -unity-text-align: middle-center;
+}
+
+.cancel-button {
+    background-color: rgb(251, 251, 251);
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: rgb(64, 139, 115);
+    border-right-color: rgb(64, 139, 115);
+    border-top-color: rgb(64, 139, 115);
+    border-bottom-color: rgb(64, 139, 115);
+    white-space: normal;
+    max-width: none;
+    width: 40%;
+    height: 45px;
+}
+
+.confirm-button {
+    width: 40%;
+    color: rgb(251, 251, 251);
+    background-color: rgb(64, 139, 115);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: rgb(64, 139, 115);
+    border-right-color: rgb(64, 139, 115);
+    border-top-color: rgb(64, 139, 115);
+    border-bottom-color: rgb(64, 139, 115);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 45px;
+}
+
+.close-button {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    -unity-font-style: bold;
+    background-color: rgb(64, 139, 115);
+    color: rgb(251, 251, 251);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.skip-button {
+    position: absolute;
+    bottom: -70px;
+    background-color: rgba(251, 251, 251, 0);
+    color: rgb(251, 251, 251);
+    -unity-font-style: bold;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.menu-buttons {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    top: 10px;
+    flex-direction: row;
+    display: none;
+}
+
+.menu-item {
+    background-color: rgba(64, 139, 115, 0.63);
+    color: rgb(251, 251, 251);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+}
+
+.menu-item:active {
+    background-color: rgb(64, 139, 115);
+}
+
+.main {
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.tile-green {
+    background-color: rgb(64, 139, 115);
+    width: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    -unity-text-align: upper-center;
+    color: rgb(251, 251, 251);
+}
+
+.tile-blue {
+    background-color: rgb(63, 83, 140);
+    width: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    -unity-text-align: upper-center;
+    color: rgb(251, 251, 251);
+}
