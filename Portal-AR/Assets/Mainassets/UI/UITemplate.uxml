@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Mainassets/UI/styles.uss?fileID=7433441132597879392&amp;guid=0ee3448f0f943824da53c1341f8eb089&amp;type=3#styles" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center; color: rgb(33, 28, 4); position: relative; height: 100%;">
+    <ui:VisualElement name="Container" picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center; color: rgb(33, 28, 4); position: relative; height: 100%; font-size: 12px;">
         <ui:VisualElement name="Welcome" class="main-background" style="align-items: center; display: none;">
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Station 1" display-tooltip-when-elided="true" name="StationName" style="-unity-font-style: normal;" />
@@ -26,24 +26,129 @@
             </ui:VisualElement>
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" enable-rich-text="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
+        <ui:VisualElement name="Tutorial-2" class="main-background" style="flex-grow: 0; align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Du kannst jederzeit durch ein Kreuz rechts oben im Bildschirm abbrechen.&#10;&#10;&#10;&#10;&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
+            </ui:VisualElement>
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Tutorial-3" class="main-background" style="flex-grow: 0; align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Du kannst jederzeit durch ein Kreuz rechts oben im Bildschirm abbrechen.&#10;&#10;Mit dem Klick auf mich (den Vogel), kannst du das ganze Menü sehen.&#10;&#10;Probier&apos;s mal aus,&#10;Klick mich!" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:Button display-tooltip-when-elided="true" name="Next" class="bird-button" />
+            <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-start;">
+                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" style="left: 10px;" />
+            </ui:VisualElement>
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
         <ui:VisualElement name="TutorialComplete" class="main-background" style="align-items: center; display: none;">
             <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Gut gemacht!" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Klick dich durch :)&#10;&#10;Probier mal jeden Button aus dem Menü unten.&#10;&#10;Danach steht deiner Zeitreise nichts mehr im Wege, versprochen!" display-tooltip-when-elided="true" name="MainText" class="main-text" />
-            <ui:VisualElement name="MenuButtons" class="menu-buttons">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="Help" class="menu-item" style="left: 30px; top: 60px;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="right: 30px; top: 60px;" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px;" />
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="translate: 0 0;" />
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
                 <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
-                <ui:Button text="Nö, lieber zum Portal" display-tooltip-when-elided="true" name="Next" class="confirm-button" style="white-space: normal;" />
+                <ui:Button text="Nö, lieber zum Portal" display-tooltip-when-elided="true" name="toStart" class="confirm-button" style="white-space: normal;" />
             </ui:VisualElement>
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialHelp" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Hilfe" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="&#10;&#10;Das ist wichtig, wenn du nicht mehr weiter weißt oder Fragen hast.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialPets" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Tiersammlung" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="&#10;&#10;Hier findest du alle Tiere, die du bereits entdeckt hast. Diese siehst du später im virtuellen Raum.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialMap" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Karte" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="&#10;&#10;Sobald du die Karte des ganzen Pfades sehen möchtest um die Station zu wechseln, dann Klick hier!&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialTrophy" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Medaillen" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="&#10;&#10;Hier sind die Medaillen die du gewinnen konntest!&#10;Diese sammelst du, indem du mit den Tieren interagierst.&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
+            <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TutorialSettings" class="main-background" style="align-items: center; display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:VisualElement name="HeaderText" class="header-text">
+                <ui:Label tabindex="-1" text="Einstellungen" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="&#10;&#10;Das ist für jede Veränderung, die du brauchst.&#10;Bspw. kannst du hier die Sprache ändern.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 1;" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="Start" class="main-background" style="align-items: center; display: none;">
@@ -58,14 +163,14 @@
                 <ui:Button text="Spiel Starten" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Main" class="main" style="display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="position: absolute; top: 10px; display: none;" />
-            <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: none; top: auto; bottom: 110px; position: absolute;">
+        <ui:VisualElement name="Main" picking-mode="Ignore" class="main" style="display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button main-close-button" />
+            <ui:VisualElement name="MenuButtons" class="menu-buttons menu-buttons-main">
                 <ui:Button text="?" display-tooltip-when-elided="true" name="Help" class="menu-item" style="top: 60px; left: 30px; -unity-font-style: bold;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 15px;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" class="menu-item" style="top: 60px; right: 30px; background-image: none; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(251, 251, 251);" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Pets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Map" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Trophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button text="?" display-tooltip-when-elided="true" name="Settings" class="menu-item" style="top: 60px; right: 30px; background-image: none; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(251, 251, 251);" />
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="position: absolute; bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Bird_Button_Colored.png?fileID=2800000&amp;guid=130830d4609bf4b489dc9eb89ad5d2eb&amp;type=3#Bird_Button_Colored&apos;);" />
         </ui:VisualElement>
@@ -75,11 +180,65 @@
                 <ui:Label tabindex="-1" text="Hilfe" display-tooltip-when-elided="true" />
                 <ui:Label tabindex="-1" text="Was ist los?&#10;Finde deine Antwort in den meist gestellten Fragen oder stelle eine eigene Frage" display-tooltip-when-elided="true" style="white-space: normal; width: auto;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex;">
-                <ui:Label tabindex="-1" text="Wie platziere ich ein Portal richtig?" display-tooltip-when-elided="true" name="ToStart" class="tile-green" style="white-space: normal;" />
+            <ui:VisualElement name="Main" style="background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex; max-height: 65%; flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Wie platziere ich ein Portal richtig?" display-tooltip-when-elided="true" name="toStart" class="tile-green" style="white-space: normal;" />
                 <ui:Label tabindex="-1" text="Wann war die Eiszeit und wie lange ist es her?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
-                <ui:Label tabindex="-1" text="Wie komme ich zurück zur Karte?" display-tooltip-when-elided="true" class="tile-green" style="white-space: normal;" />
-                <ui:Label tabindex="-1" text="Wie verdiene ich mir eine Medaille?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Wie komme ich zurück zur Karte?" display-tooltip-when-elided="true" name="toTutorialMap" class="tile-green" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Wie verdiene ich mir eine Medaille?" display-tooltip-when-elided="true" name="toTutorialTrophy" class="tile-blue" style="white-space: normal;" />
+            </ui:VisualElement>
+            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PetsMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
+                <ui:Label tabindex="-1" text="Deine Sammlung" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 14px;" />
+                <ui:Label tabindex="-1" text="Diese Tier hast du bereits besucht" display-tooltip-when-elided="true" style="white-space: normal; width: auto; -unity-font-style: bold;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Main" style="overflow: hidden; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; flex-grow: 1; max-height: none;">
+                <ui:Label tabindex="-1" text="Mammut" display-tooltip-when-elided="true" class="tile-green" style="white-space: normal; max-width: 40%; flex-grow: 0; flex-wrap: nowrap; flex-direction: column;" />
+                <ui:Label tabindex="-1" text="Höhlenlöwe" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal; max-width: 40%;" />
+                <ui:Label tabindex="-1" text="Wollnashorn" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal; max-width: 40%;" />
+                <ui:Label tabindex="-1" text="Riesenhirsch" display-tooltip-when-elided="true" class="tile-green" style="white-space: normal; max-width: 40%;" />
+            </ui:VisualElement>
+            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TrophyMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
+                <ui:Label tabindex="-1" text="Deine Medaillen" display-tooltip-when-elided="true" />
+                <ui:Label tabindex="-1" text="All das hast du dir verdient!&#10;Interagiere mit den Tieren und schalte weitere Medaillen frei." display-tooltip-when-elided="true" style="white-space: normal; width: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Main" style="background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex; max-height: 60%;">
+                <ui:VisualElement name="VisualElement" class="tile-green" style="flex-grow: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; align-items: center;">
+                    <ui:Label tabindex="-1" text="Du bist ein Entdecker!&#10;Das ist der Beweis:" display-tooltip-when-elided="true" />
+                    <ui:VisualElement name="Trophys" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-wrap: wrap; max-width: 90%;">
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement name="VisualElement" class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                        <ui:VisualElement class="trophy-slot-green" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="VisualElement" class="tile-green" style="flex-grow: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; align-items: center; background-color: rgb(63, 83, 140);">
+                    <ui:Label tabindex="-1" text="Du weißt was du machst!&#10;Deine Hightlights:" display-tooltip-when-elided="true" />
+                    <ui:VisualElement name="Trophys" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-wrap: wrap; max-width: 90%;">
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement name="VisualElement" class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                        <ui:VisualElement class="trophy-slot-blue" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
         </ui:VisualElement>

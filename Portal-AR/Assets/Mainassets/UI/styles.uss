@@ -135,17 +135,8 @@
     border-bottom-width: 0;
 }
 
-.menu-buttons {
-    flex-grow: 1;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    top: 10px;
-    flex-direction: row;
-    display: none;
-}
-
 .menu-item {
-    background-color: rgba(64, 139, 115, 0.63);
+    background-color: rgb(64, 139, 115);
     color: rgb(251, 251, 251);
     border-left-width: 0;
     border-right-width: 0;
@@ -158,10 +149,6 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
-}
-
-.menu-item:active {
-    background-color: rgb(64, 139, 115);
 }
 
 .main {
@@ -183,7 +170,7 @@
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     -unity-text-align: upper-center;
     color: rgb(251, 251, 251);
 }
@@ -199,7 +186,67 @@
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     -unity-text-align: upper-center;
     color: rgb(251, 251, 251);
+}
+
+.menu-buttons {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    top: 10px;
+    flex-direction: row;
+    display: none;
+}
+
+.menu-buttons-main {
+    display: none;
+    top: auto;
+    bottom: 110px;
+    position: absolute;
+}
+
+.menu-buttons-visible {
+    display: flex;
+}
+
+.main-close-button {
+    position: absolute;
+    top: 10px;
+    display: none;
+}
+
+.main-close-button-visible {
+    display: flex;
+}
+
+.trophy-slot-green {
+    flex-grow: 0;
+    background-color: rgba(106, 179, 155, 0.74);
+    width: 35px;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.trophy-slot-blue {
+    flex-grow: 0;
+    background-color: rgba(77, 100, 166, 0.74);
+    width: 35px;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

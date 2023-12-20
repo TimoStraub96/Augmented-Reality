@@ -5,13 +5,16 @@ public class UIController : MonoBehaviour
 {
     private int activeMenuIndex = 0;
     private readonly string[] buttonNames = {
-        "Quit", "Previous", "Next", "CloseButton", "SkipButton", "BirdButton", "Help", "ToMain", "ToStart"
+        "Quit", "Previous", "Next", "CloseButton", "SkipButton",
+        "toTutorialHelp", "toTutorialPets", "toTutorialMap", "toTutorialTrophy", "toTutorialSettings",
+        "BirdButton", "Help", "Pets", "Map", "Trophy", "Settings", "ToMain", "toStart"
     };
     private readonly string[] menuNames = {
-        "Welcome", "Tutorial-1", "TutorialComplete", "Start", "Main", "HelpMenu", "Confirmation"
+        "Welcome", "Tutorial-1", "Tutorial-2", "Tutorial-3", "TutorialComplete",
+        "TutorialHelp", "TutorialPets", "TutorialMap", "TutorialTrophy", "TutorialSettings",
+        "Start", "Main", "HelpMenu", "PetsMenu", "TrophyMenu", "Confirmation"
     };
     private Button[] buttons;
-    // private string[] menuNames = {"Welcome"};
     private VisualElement[] menus;
 
 
@@ -40,9 +43,6 @@ public class UIController : MonoBehaviour
             if (menu.name == name)
             {
                 menu.style.display = DisplayStyle.Flex;
-                if (menu.name == "HelpMenu") {
-                    Debug.Log(menu.style);
-                }
                 activeMenuIndex = index;
             }
             index++;
@@ -108,18 +108,69 @@ public class UIController : MonoBehaviour
                     });
                     buttons[6] = button;
                     break;
-                case "ToMain":
+                case "Pets":
                     button.RegisterCallback<ClickEvent>(_e => {
-                        Debug.Log("ToMain");
-                        ChangeActiveMenu("Main");
+                        ChangeActiveMenu("PetsMenu");
                     });
                     buttons[7] = button;
                     break;
-                case "ToStart":
+                case "Map":
                     button.RegisterCallback<ClickEvent>(_e => {
-                        ChangeActiveMenu("Start");
+                        ChangeActiveMenu("Confirmation");
                     });
                     buttons[8] = button;
+                    break;
+                case "Trophy":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TrophyMenu");
+                    });
+                    buttons[9] = button;
+                    break;
+                case "Settings":
+                    break;
+                case "ToMain":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("Main");
+                    });
+                    buttons[11] = button;
+                    break;
+                case "toStart":
+                    Debug.Log("test 1");
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        Debug.Log("test 2");
+                        ChangeActiveMenu("Start");
+                    });
+                    buttons[12] = button;
+                    break;
+                case "toTutorialHelp":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TutorialHelp");
+                    });
+                    buttons[13] = button;
+                    break;
+                case "toTutorialPets":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TutorialPets");
+                    });
+                    buttons[14] = button;
+                    break;
+                case "toTutorialMap":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TutorialMap");
+                    });
+                    buttons[15] = button;
+                    break;
+                case "toTutorialTrophy":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TutorialTrophy");
+                    });
+                    buttons[16] = button;
+                    break;
+                case "toTutorialSettings":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("TutorialSettings");
+                    });
+                    buttons[17] = button;
                     break;
                 default:
                     break;
@@ -130,19 +181,11 @@ public class UIController : MonoBehaviour
     void ToggleMenu() {
         VisualElement menuButtons = menus[activeMenuIndex].Q<VisualElement>("MenuButtons");
         if (menuButtons == null) return;
-        if (menuButtons.style.display == DisplayStyle.None) {
-            menuButtons.style.display = DisplayStyle.Flex;
-        } else {
-            menuButtons.style.display = DisplayStyle.None;
-        }
+        menuButtons.ToggleInClassList("menu-buttons-visible");
         if (menuNames[activeMenuIndex] == "Main") {
             Button closeButton = menus[activeMenuIndex].Q<Button>("CloseButton");
             if (closeButton == null) return;
-            if (closeButton.style.display == DisplayStyle.None) {
-                closeButton.style.display = DisplayStyle.Flex;
-            } else {
-                closeButton.style.display = DisplayStyle.None;
-            }
+            closeButton.ToggleInClassList("main-close-button-visible");
         }
     }
 }   

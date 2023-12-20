@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class SliderController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI slidertext = null;
+    // [SerializeField] private TextMeshProUGUI slidertext = null;
     public Slider slider;
     public GameObject[] portals;  //array of portals
     public GameObject marker; //array of images on slider
@@ -36,6 +36,7 @@ public class SliderController : MonoBehaviour
             newMarker.transform.localRotation = Quaternion.identity;
             newMarker.transform.SetSiblingIndex(i+1);
         }
+        Debug.Log("test");
        
     }
     void Update()
@@ -44,12 +45,12 @@ public class SliderController : MonoBehaviour
          
    
         if((int)slider.value<1){
-                slidertext.text = "Kein Portal ausgewählt";
-                ARSessionOrigin.GetComponent<PortalRaycast>().objectPrefab = null;
+                // slidertext.text = "Kein Portal ausgewählt";
+                ARSessionOrigin.GetComponent<PortalRaycast>().objectPrefab = portals[0];
         }
         else{
             if((int)(slider.value) >=1 && (int)(slider.value) <= portals.Length){
-                    slidertext.text =portals[(int)slider.value-1].name;
+                    // slidertext.text =portals[(int)slider.value-1].name;
                     ARSessionOrigin.GetComponent<PortalRaycast>().objectPrefab = portals[(int)slider.value -1];
             }
                 
