@@ -1,12 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.VisualScripting;
-using Unity.XR.CoreUtils;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class MedalsController : MonoBehaviour
@@ -60,18 +55,46 @@ public class MedalsController : MonoBehaviour
         //Subscribe to event clicked
         pointsController.OnInteraction += HandleInteractionEvent;
 
+        //deaktivate this script if there is no portal
+        
            
            
+    }
+    //call InitializeDiscoveredAnimals() one time if portal exists
+    void Update()
+    {   
+        //one time call 
+        if(GameObject.FindGameObjectWithTag("Portal") != null && allanimalsinscene.Count == 0 )
+        {
+            InitializeDiscoveredAnimals();
+            
+        }else{
+            if(GameObject.FindGameObjectWithTag("Portal") == null)
+            {
+                allanimalsinscene.Clear();
+            }
+        }
+        
+            
+            
+        
     }
 
     // Initializes the list of discovered animals
     private void InitializeDiscoveredAnimals()
     {
+
+        //find any gameobject with animal_behaviour script
+        Debug.Log("InitializeDiscoveredAnimals() has been called");
+        // Rest of the code...
+        discoveredAnimals.Clear();
+        animaltags.Clear();
         foreach (GameObject animal in animalinscene)
         {
             animaltags.Add(animal.tag);
             discoveredAnimals.Add(animal.tag, false);
         }
+        
         //find every gameobject with tag from the list
         foreach (string tag in animaltags)
         {

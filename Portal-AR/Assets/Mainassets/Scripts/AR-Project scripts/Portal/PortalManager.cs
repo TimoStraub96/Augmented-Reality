@@ -7,11 +7,17 @@ public class PortalManager : MonoBehaviour
 {
     public GameObject maincam;
     public GameObject ARWorld; 
+
+    private GameObject UI;
     [SerializeField]private Renderer[] childRenderer;
     [SerializeField]private List<Material> childmaterial =new();
 
   
     void Start(){
+        //get UI through layer
+        UI = GameObject.Find("UI");
+        //aktivate the UI medal script
+        UI.GetComponent<MedalsController>().enabled = true;
         maincam = GameObject.FindGameObjectWithTag("MainCamera");
    
         childRenderer = ARWorld.GetComponentsInChildren<Renderer>();
@@ -49,6 +55,8 @@ public class PortalManager : MonoBehaviour
 
             //activate the capsulecolider from maincam child
             maincam.transform.GetChild(0).GetComponent<CapsuleCollider>().enabled = true;
+
+            
             
             
         }else{
@@ -62,6 +70,7 @@ public class PortalManager : MonoBehaviour
             maincam.GetComponent<PointsController>().enabled = false;
             //deactivate the capsulecolider from maincam child
             maincam.transform.GetChild(0).GetComponent<CapsuleCollider>().enabled = false;
+            
                 
             
         }
