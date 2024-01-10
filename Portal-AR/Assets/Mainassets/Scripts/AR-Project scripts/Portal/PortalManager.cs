@@ -33,7 +33,6 @@ public class PortalManager : MonoBehaviour
     void OnTriggerStay(Collider collider)
     {
         Vector3 campositioninPortalspace = transform.InverseTransformPoint(maincam.transform.position);
-        //Debug.Log(campositioninPortalspace.y);
         if(campositioninPortalspace.y <2f){
            
         
@@ -42,13 +41,27 @@ public class PortalManager : MonoBehaviour
                 m.SetInt("_StencilComp",(int)CompareFunction.Always);
             }
                   
-                
+            //deactivate the portalRaycast script from maincam parent
+            maincam.transform.parent.GetComponent<PortalRaycast>().enabled = false;
+
+            //deactivate the points script from maincam
+            maincam.GetComponent<PointsController>().enabled = true;
+
+            //activate the capsulecolider from maincam child
+            maincam.transform.GetChild(0).GetComponent<CapsuleCollider>().enabled = true;
+            
             
         }else{
             
            foreach(Material m in childmaterial){
                 m.SetInt("_StencilComp",(int)CompareFunction.Equal);
             }
+            //activate the portalRaycast script from maincam parent
+            maincam.transform.parent.GetComponent<PortalRaycast>().enabled = true;
+            //activate the points script from maincam
+            maincam.GetComponent<PointsController>().enabled = false;
+            //deactivate the capsulecolider from maincam child
+            maincam.transform.GetChild(0).GetComponent<CapsuleCollider>().enabled = false;
                 
             
         }

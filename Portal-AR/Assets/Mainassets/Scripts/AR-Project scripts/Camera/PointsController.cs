@@ -41,7 +41,7 @@ public class PointsController : MonoBehaviour
     //if animal snapp function pointscontroller
     private void OnTriggerStay(Collider collider)
     {
-        
+
     
         if (collider.gameObject.GetComponent<Animal_Behavior>() != null)
         {

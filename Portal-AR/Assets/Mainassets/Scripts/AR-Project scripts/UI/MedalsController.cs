@@ -11,10 +11,9 @@ using UnityEngine.UIElements;
 
 public class MedalsController : MonoBehaviour
 {
-    //get TextMeshProUGUI from medal
-    public TextMeshProUGUI textanimal;
+    private PointsController pointsController; // Reference to the PointsController
     //save the animals that are one of a kind
-    public GameObject[] one_Of_A_kind_animal; 
+    public GameObject[] animalinscene; 
 
     //the tags of the animals that are one of a kind
     private List<String> animaltags = new List<string>();
@@ -25,13 +24,15 @@ public class MedalsController : MonoBehaviour
     private int interactions_1 = 0;
     private int interactions_2 = 0;
 
+
+//UI elements
     private VisualElement rowsnapped;
     private List<Button> buttonssnapped; // Declare 'buttons' as a List<Button>
 
     private VisualElement rowinteracted;
     private List<Button> buttonsinteracted; // Declare 'buttons' as a List<Button>
 
-    private PointsController pointsController; // Reference to the PointsController
+    
 
     private void Start()
     {   
@@ -39,10 +40,14 @@ public class MedalsController : MonoBehaviour
         rowsnapped = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Photo");
         var buttons = rowsnapped.Query<Button>().ToList();
         buttonssnapped = buttons;
+
+
         //get container firstinteraction
         rowinteracted = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Interaction");
         var buttonsinter = rowinteracted.Query<Button>().ToList();
         buttonsinteracted = buttonsinter;
+
+
         //get camera with MainCamera tag
         GameObject maincam = GameObject.FindGameObjectWithTag("MainCamera");
         //get pointscontroller from camera
@@ -59,18 +64,10 @@ public class MedalsController : MonoBehaviour
            
     }
 
-    
-
-    void Update()
-    {
-        //CheckPointsforeachanimal();
-        
-        
-    }
     // Initializes the list of discovered animals
     private void InitializeDiscoveredAnimals()
     {
-        foreach (GameObject animal in one_Of_A_kind_animal)
+        foreach (GameObject animal in animalinscene)
         {
             animaltags.Add(animal.tag);
             discoveredAnimals.Add(animal.tag, false);
@@ -91,21 +88,16 @@ public class MedalsController : MonoBehaviour
             if (pointsController.points.ContainsKey(animal.tag) && pointsController.points[animal.tag] <= 1 && discoveredAnimals[animal.tag] == false)
             {
                 Button convertedButton;
-                 //Show medal
-                discoveredAnimals[animal.tag] = true;
-                //check if medal has the same tag as animal but only show the parent
-                
 
+                discoveredAnimals[animal.tag] = true;
                 //Debug.Log("animal has been discovered" + animal.tag);
-                //if button class = animal.tag then show medal
+                //go through the first buttons and show the button with the same class as the animal
                 for(int i = 0; i < buttonssnapped.Count/2; i++)
                 {
                     convertedButton = buttonssnapped[i].ConvertTo<Button>();
-                    //log the class of the button
                     
                     if(convertedButton.ClassListContains(animal.tag))
                     {
-                        //Debug.Log("button has the same class as animal");
                         convertedButton.style.display = DisplayStyle.Flex;
                         //Debug.Log("button has been shown");
                     }
@@ -119,9 +111,7 @@ public class MedalsController : MonoBehaviour
             {
 
                 Button convertedButton;
-                //Show medal
-                //Debug.Log("animal has been discovered" + animal.tag);
-                //if button class = animal.tag then show medal
+                //go through the second buttons and show the button with the same class as the animal
                 for(int i = buttonssnapped.Count/2; i < buttonssnapped.Count; i++)
                 {
                     convertedButton = buttonssnapped[i].ConvertTo<Button>();
@@ -161,7 +151,8 @@ public class MedalsController : MonoBehaviour
         string name = animal.name;
         //show medal for first interction with any animal
         if (interactionpoints.ContainsKey(name) && interactionpoints[name] == 1)
-        {
+        {   
+            Debug.Log("first interaction with animal: " + name );
             //get from rowinteracted the the firstAnimalInteractionmedal
             var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("FirstAnimal");
             //get the button from the firstinteractionmedalPrefab
