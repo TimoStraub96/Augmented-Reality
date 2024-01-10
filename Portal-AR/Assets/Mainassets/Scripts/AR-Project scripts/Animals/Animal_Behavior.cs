@@ -34,6 +34,8 @@ public class Animal_Behavior : MonoBehaviour
     {
         // Start the Animal's action (rotation or movement)
         StartCoroutine(PerformAction());
+        //get animator
+        animator = GetComponent<Animator>();
     }
 
     IEnumerator PerformAction()
@@ -136,7 +138,8 @@ public class Animal_Behavior : MonoBehaviour
                 isMoving = false;
                 if(animator != null)
                     animator.SetBool("Moving", isMoving);
-                yield return new WaitForSeconds(randomWaitTime);
+                    if(isMoving == false)
+                        yield return new WaitForSeconds(randomWaitTime);
             }
         }
     }
@@ -185,12 +188,7 @@ public class Animal_Behavior : MonoBehaviour
     //obsolete no Animal-Tag is used
     private void OnCollisionEnter(Collision collision)
     {
-        
-            
             colliding = true;
-            
-           
-        
     }
 
     
@@ -205,6 +203,36 @@ public class Animal_Behavior : MonoBehaviour
         {
             RotateToDirection(moveDirection);
         }
+    }
+    public void SetMoveFalse(){
+        isMoving = false;
+        isRotating = false;
+        //stop the movement
+        moveDirection = Vector3.zero;
+        
+    }
+
+    public void InteractionAnimation(int i){
+        //switchcase animation
+        switch (i)
+        {
+            case 1:
+                SetMoveFalse();
+                //set interaction to 1 and play it once
+                animator.SetInteger("Interaction",1);
+               
+                break;
+            case 2:
+                SetMoveFalse();
+                //set interaction to 2
+                animator.SetInteger("Interaction",2);
+                break;
+            default:
+                break;
+        }
+
+       
+
     }
 
 }

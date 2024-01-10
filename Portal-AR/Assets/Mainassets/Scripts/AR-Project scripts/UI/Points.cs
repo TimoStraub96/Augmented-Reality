@@ -13,7 +13,7 @@ public class Points : MonoBehaviour
     void Start()
     {
         maincam = GetComponent<Snaptimer>().cam;
-        points = maincam.GetComponent<Camerasnap>().points;
+        points = maincam.GetComponent<PointsController>().points;
     }
 
     // Update is called once per frame
