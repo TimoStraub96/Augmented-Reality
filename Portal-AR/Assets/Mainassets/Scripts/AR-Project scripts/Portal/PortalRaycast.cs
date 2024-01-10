@@ -16,6 +16,11 @@ public class PortalRaycast : MonoBehaviour
     private void Awake()
     {
         raycastManager = GetComponent<ARRaycastManager>();
+        //destroy any existing portals
+        GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
+        foreach(GameObject portal in portals){
+            Destroy(portal);
+        }
     }
 
     void Update()
