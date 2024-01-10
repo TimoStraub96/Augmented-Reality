@@ -35,6 +35,8 @@ public class PointsController : MonoBehaviour
        temp_timer = timer;
        portal = GameObject.FindGameObjectWithTag("Portal");
     }
+
+    
     
 
 
@@ -102,6 +104,8 @@ public class PointsController : MonoBehaviour
             {
                 //get animal
                 interactedAnimal = hit.transform.gameObject;
+
+                Debug.Log("animal has been interacted with" + interactedAnimal.name);
                 //if animal first interaction call InteractionAnimation
                 if (interaction.ContainsKey(interactedAnimal.name) && interaction[interactedAnimal.name] < 3)
                 {
@@ -146,13 +150,17 @@ public class PointsController : MonoBehaviour
         
     }
     void Update()
-    {
-        // check if portal exists
+    {   
+        
+
+        // check if portal exists else find it
         if (portal != null)
         {
             //call clicked function
             clicked();
                 
+        }else{
+            portal = GameObject.FindGameObjectWithTag("Portal");
         }
     }
 }

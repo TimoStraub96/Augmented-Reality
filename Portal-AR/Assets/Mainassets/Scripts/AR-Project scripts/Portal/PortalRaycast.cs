@@ -19,7 +19,7 @@ public class PortalRaycast : MonoBehaviour
         //destroy any existing portals
         GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
         foreach(GameObject portal in portals){
-            Destroy(portal);
+          //  Destroy(portal);
         }
     }
 

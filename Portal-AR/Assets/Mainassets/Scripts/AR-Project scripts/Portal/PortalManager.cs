@@ -35,6 +35,7 @@ public class PortalManager : MonoBehaviour
                 
                 
         }
+        maincam.transform.GetChild(0).GetComponent<CapsuleCollider>().enabled = false;
     }
     void OnTriggerStay(Collider collider)
     {
