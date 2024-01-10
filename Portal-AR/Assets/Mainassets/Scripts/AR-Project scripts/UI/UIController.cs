@@ -8,7 +8,8 @@ public class UIController : MonoBehaviour
         "Quit", "Previous", "Next", "CloseButton", "SkipButton",
         "toTutorialHelp", "toTutorialPets", "toTutorialMap", "toTutorialTrophy", "toTutorialSettings",
         "BirdButton", "Help", "Pets", "Map", "Trophy", "Settings", "ToMain", "toStart",
-        "toMammut", "toNashorn", "toHirsch", "toLoewe", "More", "Less"
+        "toMammut", "toNashorn", "toHirsch", "toLoewe", "More", "Less",
+        "toMammut2", "toNashorn2", "toHirsch2", "toLoewe2"
     };
     private readonly string[] menuNames = {
         "Welcome", "Tutorial-1", "Tutorial-2", "Tutorial-3", "TutorialComplete",
@@ -175,21 +176,25 @@ public class UIController : MonoBehaviour
                     buttons[17] = button;
                     break;
                 case "toMammut":
+                case "toMammut2":
                     button.RegisterCallback<ClickEvent>(_e => {
                         ChangeActiveMenu("MammutInfo");
                     });
                     break;
                 case "toNashorn":
+                case "toNashorn2":
                     button.RegisterCallback<ClickEvent>(_e => {
                         ChangeActiveMenu("NashornInfo");
                     });
                     break;
                 case "toHirsch":
+                case "toHirsch2":
                     button.RegisterCallback<ClickEvent>(_e => {
                         ChangeActiveMenu("HirschInfo");
                     });
                     break;
                 case "toLoewe":
+                case "toLoewe2":
                     button.RegisterCallback<ClickEvent>(_e => {
                         ChangeActiveMenu("LoeweInfo");
                     });
