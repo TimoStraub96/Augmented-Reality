@@ -173,6 +173,9 @@
     margin-bottom: 5px;
     -unity-text-align: upper-center;
     color: rgb(251, 251, 251);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .tile-blue {
@@ -189,6 +192,9 @@
     margin-bottom: 5px;
     -unity-text-align: upper-center;
     color: rgb(251, 251, 251);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .menu-buttons {
@@ -230,10 +236,10 @@
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .trophy-slot-blue {
@@ -245,8 +251,24 @@
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.attr-icons {
+    flex-grow: 0;
+    background-color: rgba(106, 179, 155, 0.74);
+    background-image: url('project://database/Assets/Mainassets/UI/Icons/grass_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&guid=91c2893c177036e4b9ac39f1cd96ee5e&type=3#grass_FILL0_wght400_GRAD0_opsz24');
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.info-hidden {
+    display: none;
 }

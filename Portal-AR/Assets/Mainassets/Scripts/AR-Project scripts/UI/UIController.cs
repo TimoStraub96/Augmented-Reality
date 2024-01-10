@@ -7,12 +7,14 @@ public class UIController : MonoBehaviour
     private readonly string[] buttonNames = {
         "Quit", "Previous", "Next", "CloseButton", "SkipButton",
         "toTutorialHelp", "toTutorialPets", "toTutorialMap", "toTutorialTrophy", "toTutorialSettings",
-        "BirdButton", "Help", "Pets", "Map", "Trophy", "Settings", "ToMain", "toStart"
+        "BirdButton", "Help", "Pets", "Map", "Trophy", "Settings", "ToMain", "toStart",
+        "toMammut", "toNashorn", "toHirsch", "toLoewe", "More", "Less"
     };
     private readonly string[] menuNames = {
         "Welcome", "Tutorial-1", "Tutorial-2", "Tutorial-3", "TutorialComplete",
         "TutorialHelp", "TutorialPets", "TutorialMap", "TutorialTrophy", "TutorialSettings",
-        "Start", "Main", "HelpMenu", "PetsMenu", "TrophyMenu", "Confirmation"
+        "Start", "Main", "HelpMenu", "PetsMenu", "TrophyMenu", "Confirmation",
+        "MammutInfo", "HirschInfo", "NashornInfo", "LoeweInfo"
     };
     private Button[] buttons;
     private VisualElement[] menus;
@@ -172,10 +174,47 @@ public class UIController : MonoBehaviour
                     });
                     buttons[17] = button;
                     break;
+                case "toMammut":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("MammutInfo");
+                    });
+                    break;
+                case "toNashorn":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("NashornInfo");
+                    });
+                    break;
+                case "toHirsch":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("HirschInfo");
+                    });
+                    break;
+                case "toLoewe":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ChangeActiveMenu("LoeweInfo");
+                    });
+                    break;
+                case "More":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ToggleInfo();
+                    });
+                    break;
+                case "Less":
+                    button.RegisterCallback<ClickEvent>(_e => {
+                        ToggleInfo();
+                    });
+                    break;
                 default:
                     break;
             }
         }
+    }
+
+    void ToggleInfo() {
+        VisualElement small = menus[activeMenuIndex].Q<VisualElement>("Small");
+        VisualElement extended = menus[activeMenuIndex].Q<VisualElement>("Extended");
+        small.ToggleInClassList("info-hidden");
+        extended.ToggleInClassList("info-hidden");
     }
 
     void ToggleMenu() {
