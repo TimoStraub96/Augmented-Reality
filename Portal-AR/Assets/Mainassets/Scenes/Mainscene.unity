@@ -981,13 +981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0e5a8598dd970419284e04614e39bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photomedals: []
-  specialmedalPrefab: {fileID: 0}
-  firstinteractionmedalPrefab: {fileID: 0}
-  allinteractionsmedalPrefab: {fileID: 0}
   textanimal: {fileID: 0}
-  one_Of_A_kind_animal:
-  - {fileID: 1017880734}
+  one_Of_A_kind_animal: []
   allanimalsinscene: []
 --- !u!1 &388525029
 GameObject:
@@ -1291,7 +1286,7 @@ PrefabInstance:
     - target: {fileID: 9203984187322687495, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1533,12 +1528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2006159576}
---- !u!1 &1017880734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5003229902298326411, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1170774272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1069747799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1573,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 877869169862406989, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
+    - target: {fileID: 1817737504265701300, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
     - target: {fileID: 2575030135896050576, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -1599,6 +1598,11 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 510
       objectReference: {fileID: 0}
+    - target: {fileID: 4592475222341308245, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
     - target: {fileID: 6731139704420758169, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1658,6 +1662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Portal-prefab-0 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203984187322687495, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4,18 +4,15 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class MedalsController : MonoBehaviour
 {
-    public GameObject[] photomedals;
-    public GameObject specialmedalPrefab;
-    public GameObject firstinteractionmedalPrefab; //+ child for second interaction
-    public GameObject allinteractionsmedalPrefab; //+ child for second interaction
     //get TextMeshProUGUI from medal
     public TextMeshProUGUI textanimal;
-
     //save the animals that are one of a kind
     public GameObject[] one_Of_A_kind_animal; 
 
@@ -28,43 +25,36 @@ public class MedalsController : MonoBehaviour
     private int interactions_1 = 0;
     private int interactions_2 = 0;
 
+    private VisualElement rowsnapped;
+    private List<Button> buttonssnapped; // Declare 'buttons' as a List<Button>
+
+    private VisualElement rowinteracted;
+    private List<Button> buttonsinteracted; // Declare 'buttons' as a List<Button>
+
     private PointsController pointsController; // Reference to the PointsController
 
     private void Start()
-    {
+    {   
+        //get container Photo
+        rowsnapped = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Photo");
+        var buttons = rowsnapped.Query<Button>().ToList();
+        buttonssnapped = buttons;
+        //get container firstinteraction
+        rowinteracted = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Interaction");
+        var buttonsinter = rowinteracted.Query<Button>().ToList();
+        buttonsinteracted = buttonsinter;
         //get camera with MainCamera tag
         GameObject maincam = GameObject.FindGameObjectWithTag("MainCamera");
         //get pointscontroller from camera
-            pointsController = maincam.GetComponent<PointsController>();
-            InitializeDiscoveredAnimals();
-            //hide all medals and child medals
-            foreach (GameObject medal in photomedals)
-            {
-                    medal.SetActive(false);
-                    medal.transform.GetChild(0).gameObject.SetActive(false);
-
-            }
+        pointsController = maincam.GetComponent<PointsController>();
+        InitializeDiscoveredAnimals();
             
-            //subscribe to event
-            pointsController.OnSnapped += HandleSnappedEvent;
+        //subscribe to event
+        pointsController.OnSnapped += HandleSnappedEvent;
 
-            //Subscribe to event clicked
-            pointsController.OnInteraction += HandleInteractionEvent;
-            /*
+        //Subscribe to event clicked
+        pointsController.OnInteraction += HandleInteractionEvent;
 
-
-
-
-            //hide special medal
-            specialmedalPrefab.SetActive(false);
-            //hide first interaction medal and child
-            firstinteractionmedalPrefab.SetActive(false);
-            firstinteractionmedalPrefab.transform.GetChild(0).gameObject.SetActive(false);
-            //hide all interaction medal
-            allinteractionsmedalPrefab.SetActive(false);
-            allinteractionsmedalPrefab.transform.GetChild(0).gameObject.SetActive(false);
-
-            */
            
            
     }
@@ -93,96 +83,68 @@ public class MedalsController : MonoBehaviour
 
 
     }
-    //obsolete changed with event
-/*
-    public void CheckPointsforeachanimal(){
-
-        foreach (GameObject animal in allanimalsinscene)
-        {
-            if (pointsController.points.ContainsKey(animal.tag) && pointsController.points[animal.tag] >= 1 && discoveredAnimals[animal.tag] == false)
-            {
-                
-                //Show medal
-                discoveredAnimals[animal.tag] = true;
-                //check if medal has the same tag as animal but only show the parent
-                foreach (GameObject medal in photomedals)
-                {
-                    if (medal.tag == animal.tag)
-                    {
-                        medal.SetActive(true);
-                        
-                    }
-                }     
-            }
-            if (pointsController.points.ContainsKey(animal.tag) && pointsController.points[animal.tag] == 2 && discoveredAnimals[animal.tag] == true)
-            {
-                
-                //check if medal has the same tag as animal but now show the child too if it has child
-                foreach (GameObject medal in photomedals)
-                {
-                    if (medal.tag == animal.tag)
-                    {
-                        medal.transform.GetChild(0).gameObject.SetActive(true);
-                    }
-                }
-                
-
-            }
-            //if all animals are discovered 
-            if (pointsController.points.Count == animaltags.Count)
-            {
-                //show special medal
-                specialmedalPrefab.SetActive(true);
-            }
-        }
-    }
-*/
     // Handles the event when an animal is snapped and checks if a medal should be shown
     private void HandleSnappedEvent(GameObject animal)
     {
         
-        
+        //first time snapp animal
             if (pointsController.points.ContainsKey(animal.tag) && pointsController.points[animal.tag] <= 1 && discoveredAnimals[animal.tag] == false)
             {
-              
+                Button convertedButton;
                  //Show medal
                 discoveredAnimals[animal.tag] = true;
                 //check if medal has the same tag as animal but only show the parent
+                
 
-                Debug.Log("animal has been discovered" + animal.tag);
-                foreach (GameObject medal in photomedals)
+                //Debug.Log("animal has been discovered" + animal.tag);
+                //if button class = animal.tag then show medal
+                for(int i = 0; i < buttonssnapped.Count/2; i++)
                 {
-                    if (medal.tag == animal.tag)
+                    convertedButton = buttonssnapped[i].ConvertTo<Button>();
+                    //log the class of the button
+                    
+                    if(convertedButton.ClassListContains(animal.tag))
                     {
-                       // medal.SetActive(true);
-                        
+                        //Debug.Log("button has the same class as animal");
+                        convertedButton.style.display = DisplayStyle.Flex;
+                        //Debug.Log("button has been shown");
                     }
-                }     
+                }
+                
                 
                 
             }
-
+            //second time snapp animal
              if (pointsController.points.ContainsKey(animal.tag) && pointsController.points[animal.tag] >= 2 && discoveredAnimals[animal.tag] == true)
             {
 
-                  //check if medal has the same tag as animal but now show the child too if it has child
-                  Debug.Log("animal has been discovered" + animal.tag);
-                foreach (GameObject medal in photomedals)
+                Button convertedButton;
+                //Show medal
+                //Debug.Log("animal has been discovered" + animal.tag);
+                //if button class = animal.tag then show medal
+                for(int i = buttonssnapped.Count/2; i < buttonssnapped.Count; i++)
                 {
-                    if (medal.tag == animal.tag)
+                    convertedButton = buttonssnapped[i].ConvertTo<Button>();
+                    //log the class of the button
+                    
+                    if(convertedButton.ClassListContains(animal.tag))
                     {
-                      //  medal.transform.GetChild(0).gameObject.SetActive(true);
+                        //Debug.Log("button has the same class as animal");
+                        convertedButton.style.display = DisplayStyle.Flex;
+                        //Debug.Log("button has been shown");
                     }
                 }
+                
 
             }
-            Debug.Log("pointscontroller points count" + animaltags.Count);
+            
             //if all animals are discovered 
-            if (pointsController.totalpoints == animaltags.Count)
+            if (pointsController.points.Count == animaltags.Count)
             {
-               //show special medal
-               Debug.Log("all animals have been discovered");
-                //specialmedalPrefab.SetActive(true);
+                var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimals");
+                //get the button from the firstinteractionmedalPrefab
+                Button button = firstinteractionmedalPrefab.Q<Button>();
+                //button.style.display = DisplayStyle.Flex; //There is no button in UI
             }
        
     }
@@ -200,23 +162,35 @@ public class MedalsController : MonoBehaviour
         //show medal for first interction with any animal
         if (interactionpoints.ContainsKey(name) && interactionpoints[name] == 1)
         {
+            //get from rowinteracted the the firstAnimalInteractionmedal
+            var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("FirstAnimal");
+            //get the button from the firstinteractionmedalPrefab
+            Button button = firstinteractionmedalPrefab.Q<Button>();
             //show medal
-            //firstinteractionmedalPrefab.SetActive(true);
+            //button.style.display = DisplayStyle.Flex; //There is no button in UI
             
         }
         //show medal for second interction with any animal
         if (interactionpoints.ContainsKey(name) && interactionpoints[name] >= 2)
         {
             
-            //show medal
-            //firstinteractionmedalPrefab.transform.GetChild(0).gameObject.SetActive(true);
-            
+            var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("FirstMultipleAnimal");
+            var allinter = rowinteracted.Q<VisualElement>("AllInteractions");
+            Button buttoninter = allinter.Q<Button>();
+            //get the button from the firstinteractionmedalPrefab
+            Button button = firstinteractionmedalPrefab.Q<Button>();
+            //button.style.display = DisplayStyle.Flex; //There is no button in UI
+            /*
+            if(buttoninter.style.display == DisplayStyle.None)
+            {
+               buttoninter.style.display = DisplayStyle.Flex; //no button in UI
+            }
+            */
         }
         //check all animals in scene if they have been interacted with
         
         if(interactionpoints.ContainsKey(name) && interactionpoints[name] == 1)
         {
-            Debug.Log("animal has been interacted with" + name);
             interactions_1++;
             
         }
@@ -229,17 +203,19 @@ public class MedalsController : MonoBehaviour
         if (interactions_1 == allanimalsinscene.Count)
         {
             interactions_1=-1;
-            Debug.Log("all animals have been interacted with at least once");
-            //show medal
-           // allinteractionsmedalPrefab.SetActive(true);   
+            var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimalsFirst");
+            //get the button from the firstinteractionmedalPrefab
+            Button button = firstinteractionmedalPrefab.Q<Button>();
+            //button.style.display = DisplayStyle.Flex; //There is no button in UI
         }
         //if all animals have been interacted with at least twice
         if (interactions_2 == allanimalsinscene.Count)
         { 
             interactions_2=-1;
-            Debug.Log("all animals have been interacted with at least twice");
-            //show medal
-            //allinteractionsmedalPrefab.transform.GetChild(0).gameObject.SetActive(true);
+            var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimalsSecond");
+            //get the button from the firstinteractionmedalPrefab
+            Button button = firstinteractionmedalPrefab.Q<Button>();
+            //button.style.display = DisplayStyle.Flex; //There is no button in UI
         }
     }
 }

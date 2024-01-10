@@ -137,7 +137,7 @@ public class PointsController : MonoBehaviour
     public void clicked(){
         //raycast from camera
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             //call AnimalInteraction function
             AnimalInteraction(ray);
