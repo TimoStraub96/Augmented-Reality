@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eb7ec8e3b385a4245b4405d8e2d35676,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7ec8e3b385a4245b4405d8e2d35676,
         type: 3}
@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb7ec8e3b385a4245b4405d8e2d35676,
         type: 3}
       propertyPath: m_TagString
-      value: Animal
+      value: Rhino
       objectReference: {fileID: 0}
     - target: {fileID: 2936084299124737786, guid: eb7ec8e3b385a4245b4405d8e2d35676,
         type: 3}
@@ -189,6 +189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7091851138830852447}
+  moveSpeed: 0
+  snapped: 0
   rotationSpeed: 360
   minRotationTime: 1
   maxRotationTime: 5
@@ -197,8 +199,6 @@ MonoBehaviour:
   maxMoveTime: 5
   waitbetweenmove: 1
   field: {fileID: 0}
-  moveSpeed: 0
-  isMoving: 0
 --- !u!54 &3693676660652302580
 Rigidbody:
   m_ObjectHideFlags: 0

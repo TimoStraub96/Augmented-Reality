@@ -604,7 +604,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 0, z: 0.02847485, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -607, z: 510, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -663,7 +663,7 @@ Transform:
   - {fileID: 7536155687592983870}
   - {fileID: 9183516488152156847}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &310611936141447260
 PrefabInstance:
@@ -673,11 +673,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7536155687592983870}
     m_Modifications:
+    - target: {fileID: 603854753132143377, guid: f719346940f59c7488d787930d37d015,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
+    - target: {fileID: 2122995634668345320, guid: f719346940f59c7488d787930d37d015,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
     - target: {fileID: 2586542412160143491, guid: f719346940f59c7488d787930d37d015,
         type: 3}
       propertyPath: m_Name
       value: Kitzes
       objectReference: {fileID: 0}
+    - target: {fileID: 4320143951905087241, guid: f719346940f59c7488d787930d37d015,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bda1c60f6e59e4ece956587656ddb2e6, type: 2}
     - target: {fileID: 6306007496490193754, guid: f719346940f59c7488d787930d37d015,
         type: 3}
       propertyPath: m_RootOrder
