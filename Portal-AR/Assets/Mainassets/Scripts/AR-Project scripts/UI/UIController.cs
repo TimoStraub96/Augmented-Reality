@@ -138,9 +138,7 @@ public class UIController : MonoBehaviour
                     buttons[11] = button;
                     break;
                 case "toStart":
-                    Debug.Log("test 1");
                     button.RegisterCallback<ClickEvent>(_e => {
-                        Debug.Log("test 2");
                         ChangeActiveMenu("Start");
                     });
                     buttons[12] = button;

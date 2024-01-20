@@ -7,215 +7,334 @@
                 <ui:Label tabindex="-1" text="Zeitreise in AR" display-tooltip-when-elided="true" name="StationName" style="-unity-text-align: upper-center; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Herzlich Willkommen! \n Wir freuen uns über ihren Besuch. \n\n Erfahre mit dem Klick auf weiter wie du die Zeitreise in die Eiszeit startest und Medaillen gewinnen kannst :)" display-tooltip-when-elided="true" name="MainText" class="main-text" />
-            <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1;" />
             <ui:VisualElement name="ActionButtons" class="action-buttons">
                 <ui:Button text="Zurück zur Karte" display-tooltip-when-elided="true" name="Quit" class="cancel-button" />
                 <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Tutorial-1" class="main-background" style="flex-grow: 0; display: none; align-items: center;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button name="CloseButton" display-tooltip-when-elided="true" class="close-button">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/close_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c55301c31f6e6aa4982b806c488801b0&amp;type=3#close_FILL0_wght400_GRAD0_opsz24&apos;); -unity-background-image-tint-color: rgb(251, 251, 251);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="background-color: rgba(0, 0, 0, 0);">
                 <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Besuche bereits ausgestorbene Tiere aus der Eiszeit. \n\n Gewinne Medaillen mit jedem Tier, dass du entdeckst. \n\n Erfahre was beispielsweise ein Mammut gegessen und getan hat." display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button display-tooltip-when-elided="true" name="Previous" class="cancel-button" style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/arrow_back_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=0e860828120188b4391352ac06a7d395&amp;type=3#arrow_back_FILL0_wght400_GRAD0_opsz24&apos;); -unity-background-image-tint-color: rgb(33, 28, 4); width: 12px; height: 12px;" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:Button>
                 <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
             </ui:VisualElement>
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" enable-rich-text="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="Tutorial-2" class="main-background" style="flex-grow: 0; align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/close_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c55301c31f6e6aa4982b806c488801b0&amp;type=3#close_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
                 <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Du kannst jederzeit durch ein Kreuz rechts oben im Bildschirm abbrechen.&#10;&#10;&#10;&#10;&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="BirdButtonDummy" class="bird-button" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button display-tooltip-when-elided="true" name="Previous" class="cancel-button">
+                    <ui:VisualElement class="back-icon" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+                </ui:Button>
                 <ui:Button text="Weiter" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
             </ui:VisualElement>
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="Tutorial-3" class="main-background" style="flex-grow: 0; align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
                 <ui:Label tabindex="-1" text="So funktioniert&apos;s:" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Du kannst jederzeit durch ein Kreuz rechts oben im Bildschirm abbrechen.&#10;&#10;Mit dem Klick auf mich (den Vogel), kannst du das ganze Menü sehen.&#10;&#10;Probier&apos;s mal aus,&#10;Klick mich!" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:Button display-tooltip-when-elided="true" name="Next" class="bird-button" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-start;">
-                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" style="left: 10px;" />
+                <ui:Button display-tooltip-when-elided="true" name="Previous" class="cancel-button" style="left: 10px;">
+                    <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialComplete" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Gut gemacht!" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Klick dich durch :)&#10;&#10;Probier mal jeden Button aus dem Menü unten.&#10;&#10;Danach steht deiner Zeitreise nichts mehr im Wege, versprochen!" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4dc2b10ec504195489135c73e357476a&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button display-tooltip-when-elided="true" name="Previous" class="cancel-button">
+                    <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+                </ui:Button>
                 <ui:Button text="Nö, lieber zum Portal" display-tooltip-when-elided="true" name="toStart" class="confirm-button" style="white-space: normal;" />
             </ui:VisualElement>
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialHelp" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Hilfe" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="&#10;&#10;Das ist wichtig, wenn du nicht mehr weiter weißt oder Fragen hast.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialPets" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Tiersammlung" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="&#10;&#10;Hier findest du alle Tiere, die du bereits entdeckt hast. Diese siehst du später im virtuellen Raum.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; opacity: 1;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialMap" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Karte" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="&#10;&#10;Sobald du die Karte des ganzen Pfades sehen möchtest um die Station zu wechseln, dann Klick hier!&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="opacity: 1;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialTrophy" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1;" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Medaillen" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="&#10;&#10;Hier sind die Medaillen die du gewinnen konntest!&#10;Diese sammelst du, indem du mit den Tieren interagierst.&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 1;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; opacity: 1;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="TutorialSettings" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text">
                 <ui:Label tabindex="-1" text="Einstellungen" display-tooltip-when-elided="true" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="&#10;&#10;Das ist für jede Veränderung, die du brauchst.&#10;Bspw. kannst du hier die Sprache ändern.&#10;&#10;" display-tooltip-when-elided="true" name="MainText" class="main-text" />
             <ui:VisualElement name="MenuButtons" class="menu-buttons" style="display: flex;">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;); opacity: 0.8;" />
-                <ui:Button text="?" display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 1;" />
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialHelp" class="menu-item" style="left: 30px; top: 60px; -unity-font-style: bold; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialPets" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialMap" class="menu-item" style="opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialTrophy" class="menu-item" style="top: 15px; opacity: 0.8;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="toTutorialSettings" class="menu-item" style="right: 30px; top: 60px; opacity: 1;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="toStart" class="bird-button" style="translate: 0 0;" />
             <ui:Button text="Überspringen" display-tooltip-when-elided="true" name="SkipButton" class="skip-button" />
         </ui:VisualElement>
         <ui:VisualElement name="Start" class="main-background" style="align-items: center; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
                 <ui:Label tabindex="-1" text="Portal platzieren " display-tooltip-when-elided="true" style="-unity-text-align: upper-center; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Platziere gleich das Portal mit deinem Finger auf dem Boden und gehe hindurch!" display-tooltip-when-elided="true" name="MainText" class="main-text" style="background-color: rgba(251, 251, 251, 0);" />
             <ui:VisualElement name="PortalTapIcon" style="min-height: 60px;" />
             <ui:VisualElement name="ActionButtons" class="action-buttons">
-                <ui:Button text="&lt;- Zurück" display-tooltip-when-elided="true" name="Previous" class="cancel-button" />
+                <ui:Button display-tooltip-when-elided="true" name="Previous" class="cancel-button">
+                    <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+                </ui:Button>
                 <ui:Button text="Spiel Starten" display-tooltip-when-elided="true" name="Next" class="confirm-button" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Main" picking-mode="Ignore" class="main" style="display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button main-close-button" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button main-close-button">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="MenuButtons" class="menu-buttons menu-buttons-main">
-                <ui:Button text="?" display-tooltip-when-elided="true" name="Help" class="menu-item" style="top: 60px; left: 30px; -unity-font-style: bold;" />
-                <ui:Button display-tooltip-when-elided="true" name="Pets" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/pets_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0ea04634abf46554f9f77aabdf718fa3&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="Map" class="menu-item" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/map_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=2cbcf6a9502dde1448073f4869c7a8b0&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="Trophy" class="menu-item" style="top: 15px; background-image: url(&apos;project://database/Assets/Mainassets/UI/trophy_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=114cbe006de96ac4d832ca13b42fcb6c&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="Settings" class="menu-item" style="top: 60px; right: 30px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4dc2b10ec504195489135c73e357476a&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;); -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(251, 251, 251);" />
+                <ui:Button display-tooltip-when-elided="true" name="Help" class="menu-item" style="top: 60px; left: 30px; -unity-font-style: bold;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/question_mark_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7e304fdfa6f24ec4c88bba2162804d69&amp;type=3#question_mark_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="Pets" class="menu-item" style="top: 15px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/pets_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=cc1e01a03c74bea46a9ebf2c3efc6fbc&amp;type=3#pets_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="Map" class="menu-item">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/map_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=7f2923b660bdc0249953e9480a835b3e&amp;type=3#map_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="Trophy" class="menu-item" style="top: 15px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/trophy_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=b13bf3db47797244197d9bddaf83eb1d&amp;type=3#trophy_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="Settings" class="menu-item" style="top: 60px; right: 30px; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(251, 251, 251);">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/settings_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c374b90c2cd59d0488f4c544c05da398&amp;type=3#settings_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="position: absolute; bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Bird_Button_Colored.png?fileID=2800000&amp;guid=130830d4609bf4b489dc9eb89ad5d2eb&amp;type=3#Bird_Button_Colored&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="BirdButton" class="bird-button" style="position: absolute; bottom: 0;" />
         </ui:VisualElement>
         <ui:VisualElement name="HelpMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
                 <ui:Label tabindex="-1" text="Hilfe" display-tooltip-when-elided="true" />
                 <ui:Label tabindex="-1" text="Was ist los?&#10;Finde deine Antwort in den meist gestellten Fragen oder stelle eine eigene Frage" display-tooltip-when-elided="true" style="white-space: normal; width: auto;" />
             </ui:VisualElement>
             <ui:VisualElement name="Main" style="background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex; max-height: 65%; flex-grow: 1;">
-                <ui:Label tabindex="-1" text="Wie platziere ich ein Portal richtig?" display-tooltip-when-elided="true" name="toStart" class="tile-green" style="white-space: normal;" />
-                <ui:Label tabindex="-1" text="Wann war die Eiszeit und wie lange ist es her?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
-                <ui:Label tabindex="-1" text="Wie komme ich zurück zur Karte?" display-tooltip-when-elided="true" name="toTutorialMap" class="tile-green" style="white-space: normal;" />
-                <ui:Label tabindex="-1" text="Wie verdiene ich mir eine Medaille?" display-tooltip-when-elided="true" name="toTutorialTrophy" class="tile-blue" style="white-space: normal;" />
+                <ui:Button display-tooltip-when-elided="true" name="toStart" text="Wie platziere ich ein Portal richtig?" class="tile-green" style="white-space: normal;" />
+                <ui:Button text="Wann war die Eiszeit und wie lange ist es her?" display-tooltip-when-elided="true" class="tile-blue" style="white-space: normal;" />
+                <ui:Button text="Wie komme ich zurück zur Karte?" display-tooltip-when-elided="true" name="toTutorialMap" class="tile-green" style="white-space: normal;" />
+                <ui:Button text="Wie verdiene ich mir eine Medaille?" display-tooltip-when-elided="true" name="toTutorialTrophy" class="tile-blue" style="white-space: normal;" />
             </ui:VisualElement>
-            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;">
+                <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+            </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="PetsMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
                 <ui:Label tabindex="-1" text="Deine Sammlung" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 14px;" />
                 <ui:Label tabindex="-1" text="Diese Tier hast du bereits besucht" display-tooltip-when-elided="true" style="white-space: normal; width: auto; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:VisualElement name="Main" style="overflow: hidden; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; flex-grow: 1;">
-                <ui:Button display-tooltip-when-elided="true" name="toMammut" class="tile-green" style="align-items: center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
-                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                <ui:Button display-tooltip-when-elided="true" name="toMammut" class="tile-green" style="align-items: center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/Mammut_Medaille.png?fileID=2800000&amp;guid=7cbfd3046cf6382419e71ae9b84d15a8&amp;type=3#Mammut_Medaille&apos;); width: 80px; height: 80px;" />
                     <ui:Label tabindex="-1" text="Mammut" display-tooltip-when-elided="true" style="white-space: nowrap; max-width: 40%; flex-grow: 0; flex-wrap: nowrap; flex-direction: column;" />
                 </ui:Button>
-                <ui:Button display-tooltip-when-elided="true" name="toLoewe" class="tile-blue" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; align-items: center;">
-                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                <ui:Button display-tooltip-when-elided="true" name="toLoewe" class="tile-blue" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; align-items: center; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 80px; height: 80px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/L%C3%B6we_Medaille.png?fileID=2800000&amp;guid=70f205d80fd91b34fbe9f3e922257e61&amp;type=3#Löwe_Medaille&apos;);" />
                     <ui:Label tabindex="-1" text="Höhlenlöwe" display-tooltip-when-elided="true" style="white-space: nowrap; max-width: 40%;" />
                 </ui:Button>
-                <ui:Button display-tooltip-when-elided="true" name="toNashorn" class="tile-green" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; align-items: center;">
-                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Nashorn.png?fileID=2800000&amp;guid=7df8ed499dd6cd948a4250d4b8b40e1e&amp;type=3#Nashorn&apos;); min-width: 40px; min-height: 40px; width: 50px; height: 50px;" />
+                <ui:Button display-tooltip-when-elided="true" name="toNashorn" class="tile-green" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; align-items: center; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); min-width: 40px; min-height: 40px; width: 80px; height: 80px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/TiermedallieNashorn.png?fileID=2800000&amp;guid=1691d22095b436646b0ddd55951f4c47&amp;type=3#TiermedallieNashorn&apos;);" />
                     <ui:Label tabindex="-1" text="Wollnashorn" display-tooltip-when-elided="true" style="white-space: nowrap; max-width: 40%;" />
                 </ui:Button>
-                <ui:Button display-tooltip-when-elided="true" name="toHirsch" class="tile-blue" style="align-items: center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
-                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;); min-width: auto; min-height: auto; width: 50px; height: 50px;" />
+                <ui:Button display-tooltip-when-elided="true" name="toHirsch" class="tile-blue" style="align-items: center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); min-width: auto; min-height: auto; width: 80px; height: 80px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/TiermedallieRiesenhirsch.png?fileID=2800000&amp;guid=96cdf66888adc3e4db799a1c238b9beb&amp;type=3#TiermedallieRiesenhirsch&apos;);" />
                     <ui:Label tabindex="-1" text="Riesenhirsch" display-tooltip-when-elided="true" style="white-space: nowrap; max-width: 40%;" />
                 </ui:Button>
             </ui:VisualElement>
-            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;">
+                <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+            </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="TrophyMenu" class="main" style="background-color: rgb(221, 223, 202); display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="top: 10px;">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+            </ui:Button>
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 75%;">
                 <ui:Label tabindex="-1" text="Deine Medaillen" display-tooltip-when-elided="true" />
                 <ui:Label tabindex="-1" text="All das hast du dir verdient!&#10;Interagiere mit den Tieren und schalte weitere Medaillen frei." display-tooltip-when-elided="true" style="white-space: normal; width: auto;" />
@@ -229,10 +348,10 @@
                                 <ui:Button display-tooltip-when-elided="true" name="toMammut" class="trophy-slot-green Elephant" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Nashorn" class="trophy-slot-green">
-                                <ui:Button display-tooltip-when-elided="true" name="toNashorn" class="trophy-slot-green Rhino" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Nashorn.png?fileID=2800000&amp;guid=7df8ed499dd6cd948a4250d4b8b40e1e&amp;type=3#Nashorn&apos;); background-color: rgba(188, 188, 188, 0); min-width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; display: none;" />
+                                <ui:Button display-tooltip-when-elided="true" name="toNashorn" class="trophy-slot-green Rhino" style="background-color: rgba(188, 188, 188, 0); min-width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Hirsch" class="trophy-slot-green">
-                                <ui:Button display-tooltip-when-elided="true" name="toHirsch" class="trophy-slot-green Kitz" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;); display: none;" />
+                                <ui:Button display-tooltip-when-elided="true" name="toHirsch" class="trophy-slot-green Kitz" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Loewe" class="trophy-slot-green">
                                 <ui:Button display-tooltip-when-elided="true" name="toLoewe" class="trophy-slot-green Lion" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
@@ -243,10 +362,10 @@
                                 <ui:Button display-tooltip-when-elided="true" name="toMammut2" class="trophy-slot-green Elephant" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Nashorn" class="trophy-slot-green">
-                                <ui:Button display-tooltip-when-elided="true" name="toNashorn2" class="trophy-slot-green Rhino" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Nashorn.png?fileID=2800000&amp;guid=7df8ed499dd6cd948a4250d4b8b40e1e&amp;type=3#Nashorn&apos;);" />
+                                <ui:Button display-tooltip-when-elided="true" name="toNashorn2" class="trophy-slot-green Rhino" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Hirsch" class="trophy-slot-green">
-                                <ui:Button display-tooltip-when-elided="true" name="toHirsch2" class="trophy-slot-green Kitz" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; display: none; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;);" />
+                                <ui:Button display-tooltip-when-elided="true" name="toHirsch2" class="trophy-slot-green Kitz" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="Loewe" class="trophy-slot-green">
                                 <ui:Button display-tooltip-when-elided="true" name="toLoewe2" class="trophy-slot-green Lion" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
@@ -258,25 +377,25 @@
                     <ui:Label tabindex="-1" text="Du weißt was du machst!&#10;Deine Hightlights:" display-tooltip-when-elided="true" />
                     <ui:VisualElement name="Trophys" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: column; flex-wrap: nowrap; max-width: none;">
                         <ui:VisualElement name="FirstRow" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
-                            <ui:VisualElement name="AllAnimals" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
+                            <ui:VisualElement name="AllAnimals" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/social_leaderboard_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=5365fc58be591174cb11d588a628ecca&amp;type=3#social_leaderboard_FILL0_wght400_GRAD0_opsz24&apos;);" />
                             </ui:VisualElement>
-                            <ui:VisualElement name="AllInteractions" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
+                            <ui:VisualElement name="AllInteractions" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none; background-color: rgba(77, 100, 166, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/workspace_premium_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=c1ac505a193d8834a890b094d8b3935c&amp;type=3#workspace_premium_FILL0_wght400_GRAD0_opsz24&apos;);" />
                             </ui:VisualElement>
-                            <ui:VisualElement name="FirstAnimal" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
+                            <ui:VisualElement name="FirstAnimal" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/military_tech_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=447f6aeab60801b41b88a56e87cfc130&amp;type=3#military_tech_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
                             </ui:VisualElement>
-                            <ui:VisualElement name="FirstMultipleAnimal" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
+                            <ui:VisualElement name="FirstMultipleAnimal" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/editor_choice_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=9f7be2bf3c3b80e45b2146354a7677b8&amp;type=3#editor_choice_FILL0_wght400_GRAD0_opsz24&apos;);" />
                             </ui:VisualElement>
                         </ui:VisualElement>
                         <ui:VisualElement name="SecondRow" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
-                            <ui:VisualElement name="AllAnimalsFirst" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
+                            <ui:VisualElement name="AllAnimalsFirst" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=6feec87a100d9ea49b86b60a42ff7655&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;);" />
                             </ui:VisualElement>
-                            <ui:VisualElement name="AllAnimalsSecond" class="trophy-slot-blue">
-                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
+                            <ui:VisualElement name="AllAnimalsSecond" class="trophy-slot-blue" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                                <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/license_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=5e4ecb489f630df4784ef5362bc88d8a&amp;type=3#license_FILL0_wght400_GRAD0_opsz24&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;" />
                             </ui:VisualElement>
                             <ui:VisualElement class="trophy-slot-blue">
                                 <ui:VisualElement class="trophy-slot-blue" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/rewarded_ads_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=4906324bd6d4cee4788b468e2df5af19&amp;type=3#rewarded_ads_FILL0_wght400_GRAD0_opsz24&apos;); display: none;" />
@@ -288,7 +407,10 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Button text="&lt;-Zurück" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;" />
+            <ui:Button display-tooltip-when-elided="true" name="ToMain" class="cancel-button" style="position: absolute; bottom: 10px; left: 10px;">
+                <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+            </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="Confirmation" class="main-background" style="flex-grow: 0; align-items: center; height: auto; display: none;">
             <ui:VisualElement name="HeaderText" class="header-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
@@ -296,20 +418,31 @@
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Station wirklich verlassen?" display-tooltip-when-elided="true" class="main-text" style="background-color: rgba(251, 251, 251, 0); margin-bottom: 60px;" />
             <ui:VisualElement name="ActionButtons" class="action-buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                <ui:Button text="&lt;- Nein" display-tooltip-when-elided="true" name="ToMain" class="cancel-button" />
+                <ui:Button display-tooltip-when-elided="true" name="ToMain" class="cancel-button">
+                    <ui:VisualElement class="back-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:Label tabindex="-1" text="Zurück" display-tooltip-when-elided="true" class="back-label" />
+                </ui:Button>
                 <ui:Button text="Ja" display-tooltip-when-elided="true" name="Quit" class="confirm-button" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="MammutInfo" class="main-background" style="flex-grow: 1; background-color: rgb(64, 139, 115); margin-top: 30px; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(33, 28, 4);" />
+            </ui:Button>
             <ui:Label tabindex="-1" text="Mammut" display-tooltip-when-elided="true" name="Name" class="header-text" style="color: rgb(251, 251, 251);" />
-            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:VisualElement class="attr-icons" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/thermometer_minus_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=ec3c0ce3a3d605b4cb4155faca3ce75b&amp;type=3#thermometer_minus_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/sick_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=eb3b954e402ef614b83ddee60b183575&amp;type=3#sick_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 5px;">
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/eco_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=dc4e5b8ac768dbd44aec4a16db89b924&amp;type=3#eco_FILL0_wght400_GRAD0_opsz24&apos;); width: 100%; height: 100%;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
-                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;); width: 100px; height: 100px; top: -20px;" />
+                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100px; height: 100px; top: -20px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/Mammut_Medaille.png?fileID=2800000&amp;guid=7cbfd3046cf6382419e71ae9b84d15a8&amp;type=3#Mammut_Medaille&apos;); scale: 1.2 1.2;" />
                 <ui:VisualElement name="Small" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; align-items: center;">
                     <ui:Label tabindex="-1" text="Europa, Asien" display-tooltip-when-elided="true" name="Origin" style="font-size: 10px; top: -20px;" />
                     <ui:Label tabindex="-1" text="Eine ausgestorbene Art aus der Familie der Elefanten" display-tooltip-when-elided="true" name="MainText" style="white-space: normal; -unity-text-align: upper-center;" />
@@ -323,15 +456,23 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="HirschInfo" class="main-background" style="flex-grow: 1; background-color: rgb(64, 139, 115); margin-top: 30px; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(33, 28, 4);" />
+            </ui:Button>
             <ui:Label tabindex="-1" text="Riesenhirsch" display-tooltip-when-elided="true" name="Name" class="header-text" style="color: rgb(251, 251, 251);" />
-            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:VisualElement class="attr-icons" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/thermometer_minus_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=ec3c0ce3a3d605b4cb4155faca3ce75b&amp;type=3#thermometer_minus_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/sick_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=eb3b954e402ef614b83ddee60b183575&amp;type=3#sick_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 5px;">
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/eco_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=dc4e5b8ac768dbd44aec4a16db89b924&amp;type=3#eco_FILL0_wght400_GRAD0_opsz24&apos;); width: 100%; height: 100%;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;); width: 100%; height: 100%;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
-                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;); width: 100px; height: 100px; top: -20px;" />
+                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100px; height: 100px; top: -20px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/TiermedallieRiesenhirsch.png?fileID=2800000&amp;guid=96cdf66888adc3e4db799a1c238b9beb&amp;type=3#TiermedallieRiesenhirsch&apos;);" />
                 <ui:VisualElement name="Small" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; align-items: center;">
                     <ui:Label tabindex="-1" text="Europa, Asien" display-tooltip-when-elided="true" name="Origin" style="font-size: 10px; top: -20px;" />
                     <ui:Label tabindex="-1" text="Eine ausgestorbene Art aus der Familie der Hirsche" display-tooltip-when-elided="true" name="MainText" style="white-space: normal; -unity-text-align: upper-center;" />
@@ -345,15 +486,23 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="LoeweInfo" class="main-background" style="flex-grow: 1; background-color: rgb(64, 139, 115); margin-top: 30px; display: none;">
-            <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);" />
+            <ui:Button display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);">
+                <ui:VisualElement class="close-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(33, 28, 4);" />
+            </ui:Button>
             <ui:Label tabindex="-1" text="Höhlenlöwe" display-tooltip-when-elided="true" name="Name" class="header-text" style="color: rgb(251, 251, 251);" />
-            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/kebab_dining_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=0e78439253c569b498dd10d7fced9b01&amp;type=3#kebab_dining_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/thermometer_minus_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=ec3c0ce3a3d605b4cb4155faca3ce75b&amp;type=3#thermometer_minus_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/sick_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=eb3b954e402ef614b83ddee60b183575&amp;type=3#sick_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 5px;">
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
-                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Hirsch.png?fileID=2800000&amp;guid=72aa5b88c8e25e74e97ed3fc5dc18b27&amp;type=3#Hirsch&apos;); width: 100px; height: 100px; top: -20px;" />
+                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100px; height: 100px; top: -20px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/L%C3%B6we_Medaille.png?fileID=2800000&amp;guid=70f205d80fd91b34fbe9f3e922257e61&amp;type=3#Löwe_Medaille&apos;);" />
                 <ui:VisualElement name="Small" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; align-items: center;">
                     <ui:Label tabindex="-1" text="Europa, Nordamerika" display-tooltip-when-elided="true" name="Origin" style="font-size: 10px; top: -20px;" />
                     <ui:Label tabindex="-1" text="Eine ausgestorbene Großkatze, die zur Zeit des Pleistozäns lebte." display-tooltip-when-elided="true" name="MainText" style="white-space: normal; -unity-text-align: upper-center;" />
@@ -369,13 +518,19 @@
         <ui:VisualElement name="NashornInfo" class="main-background" style="flex-grow: 1; background-color: rgb(64, 139, 115); margin-top: 30px; display: none;">
             <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" class="close-button" style="background-color: rgb(221, 223, 202); color: rgb(33, 28, 4);" />
             <ui:Label tabindex="-1" text="Wollnashorn" display-tooltip-when-elided="true" name="Name" class="header-text" style="color: rgb(251, 251, 251);" />
-            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:VisualElement class="attr-icons" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/thermometer_minus_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=ec3c0ce3a3d605b4cb4155faca3ce75b&amp;type=3#thermometer_minus_FILL0_wght400_GRAD0_opsz24&apos;);" />
-                <ui:VisualElement class="attr-icons" style="background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/sick_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&amp;guid=eb3b954e402ef614b83ddee60b183575&amp;type=3#sick_FILL0_wght400_GRAD0_opsz24&apos;);" />
+            <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 5px;">
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/eco_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=dc4e5b8ac768dbd44aec4a16db89b924&amp;type=3#eco_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement class="attr-icons">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
-                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Animals/Nashorn.png?fileID=2800000&amp;guid=7df8ed499dd6cd948a4250d4b8b40e1e&amp;type=3#Nashorn&apos;); width: 100px; height: 100px; top: -20px;" />
+                <ui:VisualElement name="AnimalIcon" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100px; height: 100px; top: -20px; background-image: url(&apos;project://database/Assets/Mainassets/UI/Animals/TiermedallieNashorn.png?fileID=2800000&amp;guid=1691d22095b436646b0ddd55951f4c47&amp;type=3#TiermedallieNashorn&apos;);" />
                 <ui:VisualElement name="Small" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; align-items: center;">
                     <ui:Label tabindex="-1" text="Europa, Asien" display-tooltip-when-elided="true" name="Origin" style="font-size: 10px; top: -20px;" />
                     <ui:Label tabindex="-1" text="Eine ausgestorbene Art aus der Familie der Nashörner" display-tooltip-when-elided="true" name="MainText" style="white-space: normal; -unity-text-align: upper-center;" />

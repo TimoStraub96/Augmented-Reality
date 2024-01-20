@@ -37,7 +37,7 @@
     border-bottom-left-radius: 60px;
     border-top-right-radius: 60px;
     border-bottom-right-radius: 60px;
-    background-image: url('project://database/Assets/Mainassets/UI/Bird_Button_Colored.png?fileID=2800000&guid=130830d4609bf4b489dc9eb89ad5d2eb&type=3#Bird_Button_Colored');
+    background-image: url('project://database/Assets/Mainassets/UI/Icons/Bird_Button.png?fileID=2800000&guid=f498803e7f039824fa53fd0593be066b&type=3#Bird_Button');
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -83,6 +83,9 @@
     max-width: none;
     width: 40%;
     height: 45px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .confirm-button {
@@ -121,6 +124,10 @@
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 .skip-button {
@@ -149,6 +156,10 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .main {
@@ -255,18 +266,25 @@
     margin-right: 3px;
     margin-top: 3px;
     margin-bottom: 3px;
+    align-items: center;
+    justify-content: center;
 }
 
 .attr-icons {
     flex-grow: 0;
     background-color: rgba(106, 179, 155, 0.74);
-    background-image: url('project://database/Assets/Mainassets/UI/Icons/grass_FILL0_wght400_GRAD0_opsz24.png?fileID=2800000&guid=91c2893c177036e4b9ac39f1cd96ee5e&type=3#grass_FILL0_wght400_GRAD0_opsz24');
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .info-hidden {
@@ -274,16 +292,45 @@
 }
 
 .Elephant {
+    background-image: url('project://database/Assets/Mainassets/UI/Animals/Mammut_Medaille.png?fileID=2800000&guid=7cbfd3046cf6382419e71ae9b84d15a8&type=3#Mammut_Medaille');
 }
 
 .Lion {
+    background-image: url('project://database/Assets/Mainassets/UI/Animals/L%C3%B6we_Medaille.png?fileID=2800000&guid=70f205d80fd91b34fbe9f3e922257e61&type=3#Löwe_Medaille');
 }
 
 .Kitz {
+    background-image: url('project://database/Assets/Mainassets/UI/Animals/TiermedallieRiesenhirsch.png?fileID=2800000&guid=96cdf66888adc3e4db799a1c238b9beb&type=3#TiermedallieRiesenhirsch');
 }
 
 .Hirsch {
 }
 
 .Rhino {
+    background-image: url('project://database/Assets/Mainassets/UI/Animals/TiermedallieNashorn.png?fileID=2800000&guid=1691d22095b436646b0ddd55951f4c47&type=3#TiermedallieNashorn');
+}
+
+.back-icon {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/Mainassets/UI/Icons/arrow_back_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&guid=0e860828120188b4391352ac06a7d395&type=3#arrow_back_FILL0_wght400_GRAD0_opsz24');
+    height: 12px;
+    -unity-background-image-tint-color: rgb(33, 28, 4);
+}
+
+.back-label {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.close-icon {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/Mainassets/UI/Icons/close_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&guid=c55301c31f6e6aa4982b806c488801b0&type=3#close_FILL0_wght400_GRAD0_opsz24');
 }
