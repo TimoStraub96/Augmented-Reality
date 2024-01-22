@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maincam: {fileID: 0}
   ARWorld: {fileID: 7196221174541756292}
+  isInside: 0
   childRenderer: []
   childmaterial: []
 --- !u!1 &2667248845498107063
@@ -2225,6 +2226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 88ea150264d19b34a823ddc457d8ad75,
         type: 3}
+      propertyPath: m_TagString
+      value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88ea150264d19b34a823ddc457d8ad75,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2284,6 +2290,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7717180906834572594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88ea150264d19b34a823ddc457d8ad75,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3793608273331935758}
   m_SourcePrefab: {fileID: 100100000, guid: 88ea150264d19b34a823ddc457d8ad75, type: 3}
 --- !u!1 &7196221174541756292 stripped
 GameObject:
@@ -2313,6 +2323,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 88ea150264d19b34a823ddc457d8ad75, type: 3}
+--- !u!114 &3793608273331935758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196221174541756292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a6f2099c7008743a1ee219ab7af77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maincam: {fileID: 0}
 --- !u!4 &7536155687592983870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88ea150264d19b34a823ddc457d8ad75,

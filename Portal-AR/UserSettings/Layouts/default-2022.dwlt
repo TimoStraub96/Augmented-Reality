@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 0
     width: 1306
     height: 953
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -241,8 +241,8 @@ MonoBehaviour:
     y: 0
     width: 583
     height: 953
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -320,8 +320,8 @@ MonoBehaviour:
     y: 0
     width: 383
     height: 1299
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -671,9 +671,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.29813, y: -5.142459, z: 27.757309}
+    m_Target: {x: 1.8616724, y: 0.5191113, z: 4.5716863}
     speed: 2
-    m_Value: {x: -13.29813, y: -5.142459, z: 27.757309}
+    m_Value: {x: 1.8616724, y: 0.5191113, z: 4.5716863}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -719,13 +719,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.18067458, y: -0.51040757, z: 0.11038711, w: 0.8336496}
+    m_Target: {x: 0.017940033, y: 0.20225804, z: -0.0036634633, w: 0.9793574}
     speed: 2
-    m_Value: {x: 0.18064603, y: -0.5103269, z: 0.11036966, w: 0.83351785}
+    m_Value: {x: 0.019405274, y: 0.20221345, z: -0.0039663077, w: 0.97914124}
   m_Size:
-    m_Target: 21.63112
+    m_Target: 2.3692203
     speed: 2
-    m_Value: 21.63112
+    m_Value: 2.4808588
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -972,7 +972,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Mainassets/UI
+    - Assets/Mainassets/Prefabs/AR-Projects Prefabs/Dimensions
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -980,16 +980,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/Mainassets/UI
+  - Assets/Mainassets/Prefabs/AR-Projects Prefabs/Dimensions
   m_LastFoldersGridSize: 80
   m_LastProjectPath: C:\Users\podye\Desktop\Neuer Ordner\Augmented-Reality\Portal-AR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 123}
-    m_SelectedIDs: 94850000
-    m_LastClickedID: 34196
-    m_ExpandedIDs: 000000003485000036850000388500003a8500003c8500003e85000040850000428500004485000046850000488500009485000000ca9a3b
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 64020100
+    m_LastClickedID: 66148
+    m_ExpandedIDs: 000000004c8500004e85000050850000528500005485000056850000588500005a8500005c8500005e85000060850000628500008c850000908500005c02010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1017,7 +1017,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 282}
     m_SelectedIDs: 26750000
     m_LastClickedID: 29990
-    m_ExpandedIDs: 00000000328500003485000036850000388500003a8500003c8500003e8500004085000042850000448500004685000048850000
+    m_ExpandedIDs: 000000004c8500004e85000050850000528500005485000056850000588500005a8500005c8500005e8500006085000062850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1061,7 +1061,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1146,9 +1146,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 66760000
-      m_LastClickedID: 0
-      m_ExpandedIDs: aafaffff
+      m_SelectedIDs: d6750000
+      m_LastClickedID: 30166
+      m_ExpandedIDs: 342aadff4e2fadff4ef7ffff20fbffff22fbffffd67500000e760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

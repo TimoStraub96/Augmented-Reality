@@ -12,6 +12,7 @@ TagManager:
   - Kitz
   - Hirsch
   - Rhino
+  - Room
   layers:
   - Default
   - TransparentFX
