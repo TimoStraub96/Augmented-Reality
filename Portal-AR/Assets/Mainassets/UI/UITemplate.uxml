@@ -438,7 +438,7 @@
                     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement class="attr-icons">
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Icon-Ausgestorben.svg?fileID=7388822144124034973&amp;guid=bee9ce6efef1beb46ae6d97a143bfc86&amp;type=3#Icon-Ausgestorben&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
@@ -468,7 +468,7 @@
                     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;); width: 100%; height: 100%;" />
                 </ui:VisualElement>
                 <ui:VisualElement class="attr-icons">
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Icon-Ausgestorben.svg?fileID=7388822144124034973&amp;guid=bee9ce6efef1beb46ae6d97a143bfc86&amp;type=3#Icon-Ausgestorben&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
@@ -492,13 +492,13 @@
             <ui:Label tabindex="-1" text="Höhlenlöwe" display-tooltip-when-elided="true" name="Name" class="header-text" style="color: rgb(251, 251, 251);" />
             <ui:VisualElement name="Icons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-direction: row; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 5px;">
                 <ui:VisualElement class="attr-icons">
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: none;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Meat-Icon_Icon-Meat.svg?fileID=7388822144124034973&amp;guid=611b7aedba43dfa4c8465ab0b47658dc&amp;type=3#Meat-Icon_Icon-Meat&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement class="attr-icons">
                     <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement class="attr-icons">
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Icon-Ausgestorben.svg?fileID=7388822144124034973&amp;guid=bee9ce6efef1beb46ae6d97a143bfc86&amp;type=3#Icon-Ausgestorben&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
@@ -526,7 +526,7 @@
                     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/ac_unit_FILL0_wght400_GRAD0_opsz24.svg?fileID=7388822144124034973&amp;guid=99403c09175893b408ea3107702fde21&amp;type=3#ac_unit_FILL0_wght400_GRAD0_opsz24&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement class="attr-icons">
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Mainassets/UI/Icons/Icon-Ausgestorben.svg?fileID=7388822144124034973&amp;guid=bee9ce6efef1beb46ae6d97a143bfc86&amp;type=3#Icon-Ausgestorben&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Main" class="main-background" style="flex-grow: 1; background-color: rgb(221, 223, 202); width: 100%; margin-bottom: 0; margin-top: 30px; align-items: center;">
