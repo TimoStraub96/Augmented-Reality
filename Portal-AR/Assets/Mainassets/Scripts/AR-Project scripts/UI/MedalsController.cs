@@ -25,7 +25,6 @@ public class MedalsController : MonoBehaviour
     private List<Button> buttonssnapped; // Declare 'buttons' as a List<Button>
 
     private VisualElement rowinteracted;
-    private List<Button> buttonsinteracted; // Declare 'buttons' as a List<Button>
 
     
 
@@ -39,8 +38,6 @@ public class MedalsController : MonoBehaviour
 
         //get container firstinteraction
         rowinteracted = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Interaction");
-        var buttonsinter = rowinteracted.Query<Button>().ToList();
-        buttonsinteracted = buttonsinter;
 
 
         //get camera with MainCamera tag
@@ -85,7 +82,7 @@ public class MedalsController : MonoBehaviour
     {
 
         //find any gameobject with animal_behaviour script
-        Debug.Log("InitializeDiscoveredAnimals() has been called");
+        
         // Rest of the code...
         discoveredAnimals.Clear();
         animaltags.Clear();
@@ -113,7 +110,7 @@ public class MedalsController : MonoBehaviour
                 Button convertedButton;
 
                 discoveredAnimals[animal.tag] = true;
-                //Debug.Log("animal has been discovered" + animal.tag);
+                //.Log("animal has been discovered" + animal.tag);
                 //go through the first buttons and show the button with the same class as the animal
                 for(int i = 0; i < buttonssnapped.Count/2; i++)
                 {
@@ -122,7 +119,7 @@ public class MedalsController : MonoBehaviour
                     if(convertedButton.ClassListContains(animal.tag))
                     {
                         convertedButton.style.display = DisplayStyle.Flex;
-                        //Debug.Log("button has been shown");
+                        //.Log("button has been shown");
                     }
                 }
                 
@@ -142,22 +139,26 @@ public class MedalsController : MonoBehaviour
                     
                     if(convertedButton.ClassListContains(animal.tag))
                     {
-                        //Debug.Log("button has the same class as animal");
+                        //.Log("button has the same class as animal");
                         convertedButton.style.display = DisplayStyle.Flex;
-                        //Debug.Log("button has been shown");
+                        //.Log("button has been shown");
                     }
                 }
                 
 
             }
             
+            
             //if all animals are discovered 
+            
             if (pointsController.points.Count == animaltags.Count)
             {
-                var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimals");
+                var all = rowinteracted.Q<VisualElement>("AllAnimals");
                 //get the button from the firstinteractionmedalPrefab
-                Button button = firstinteractionmedalPrefab.Q<Button>();
-                //button.style.display = DisplayStyle.Flex; //There is no button in UI
+                var button = all.Q<VisualElement>("");
+                button.style.display = DisplayStyle.Flex; //There is no button in UI
+
+                Debug.Log("all animals have been discovered");
             }
        
     }
@@ -175,31 +176,33 @@ public class MedalsController : MonoBehaviour
         //show medal for first interction with any animal
         if (interactionpoints.ContainsKey(name) && interactionpoints[name] == 1)
         {   
-            Debug.Log("first interaction with animal: " + name );
+           
             //get from rowinteracted the the firstAnimalInteractionmedal
             var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("FirstAnimal");
-            //get the button from the firstinteractionmedalPrefab
-            Button button = firstinteractionmedalPrefab.Q<Button>();
+            //get the child from firstinteractionmedalPrefab
+            var button = firstinteractionmedalPrefab.Q<VisualElement>("");
+
+         
             //show medal
-            //button.style.display = DisplayStyle.Flex; //There is no button in UI
-            
+            button.style.display = DisplayStyle.Flex; //There is no button in UI
+           Debug.Log("First interaction with any animal");
         }
         //show medal for second interction with any animal
         if (interactionpoints.ContainsKey(name) && interactionpoints[name] >= 2)
         {
-            
+           
             var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("FirstMultipleAnimal");
             var allinter = rowinteracted.Q<VisualElement>("AllInteractions");
-            Button buttoninter = allinter.Q<Button>();
-            //get the button from the firstinteractionmedalPrefab
-            Button button = firstinteractionmedalPrefab.Q<Button>();
-            //button.style.display = DisplayStyle.Flex; //There is no button in UI
-            /*
-            if(buttoninter.style.display == DisplayStyle.None)
-            {
-               buttoninter.style.display = DisplayStyle.Flex; //no button in UI
-            }
-            */
+            //get visuelelement from firstinteractionmedalPrefab
+            var visuelelement = firstinteractionmedalPrefab.Q<VisualElement>("");
+            var allinteract = allinter.Q<VisualElement>("");
+            visuelelement.style.display = DisplayStyle.Flex; //There is no button in UI
+             Debug.Log("Second interaction with any animal");
+            
+            allinteract.style.display = DisplayStyle.Flex; //no button in UI
+            Debug.Log("All interactions with any animal");
+        
+    
         }
         //check all animals in scene if they have been interacted with
         
@@ -219,8 +222,9 @@ public class MedalsController : MonoBehaviour
             interactions_1=-1;
             var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimalsFirst");
             //get the button from the firstinteractionmedalPrefab
-            Button button = firstinteractionmedalPrefab.Q<Button>();
-            //button.style.display = DisplayStyle.Flex; //There is no button in UI
+            var button = firstinteractionmedalPrefab.Q<VisualElement>("");
+            button.style.display = DisplayStyle.Flex; //There is no button in UI
+            Debug.Log("First interaction with all animals");
         }
         //if all animals have been interacted with at least twice
         if (interactions_2 == allanimalsinscene.Count)
@@ -228,8 +232,10 @@ public class MedalsController : MonoBehaviour
             interactions_2=-1;
             var firstinteractionmedalPrefab = rowinteracted.Q<VisualElement>("AllAnimalsSecond");
             //get the button from the firstinteractionmedalPrefab
-            Button button = firstinteractionmedalPrefab.Q<Button>();
-            //button.style.display = DisplayStyle.Flex; //There is no button in UI
+            var button = firstinteractionmedalPrefab.Q<VisualElement>("");
+            button.style.display = DisplayStyle.Flex; //There is no button in UI
+             Debug.Log("Second interaction with all animals");
         }
+        
     }
 }
