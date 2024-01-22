@@ -890,16 +890,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2575030135896050576, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: -701
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575030135896050576, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 604
-      objectReference: {fileID: 0}
     - target: {fileID: 6731139704420758169, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
         type: 3}
       propertyPath: m_RootOrder
@@ -953,6 +943,11 @@ PrefabInstance:
     - target: {fileID: 6731139704420758169, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709646633938912849, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9203984187322687495, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
