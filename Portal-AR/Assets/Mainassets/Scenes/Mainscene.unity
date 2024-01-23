@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581d4c7ba094fde4ebc810a1ac7acd3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 9203984187322687495, guid: bdfe36bfb009a1a40a4ae57869a7ec0a,
+  objectPrefab: {fileID: 9203984187322687495, guid: 1bcc491874bbe3944a2a0c29f62f1e84,
     type: 3}
   ARCamera: {fileID: 22732920}
 --- !u!114 &388525037
